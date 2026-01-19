@@ -91,7 +91,7 @@ OnInit:
 // -----------------------------------------------------------
 
 	// Combine values as needed (e.g. 1|8 = 1+8 = 9).
-	set .Options, 1|8;
+	set .Options, 1|2|8|16;
 
 	// Rewards per castle.
 	//   setarray .reward_id[0],     <itemID>{,<itemID>,...}
