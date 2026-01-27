@@ -1343,6 +1343,7 @@ Body:
     MaxLevel: 2
     Type: Magic
     TargetType: Self
+    AfterCastActDelay: 0
     DamageFlags:
       NoDamage: true
     Flags:

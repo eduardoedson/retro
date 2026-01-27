@@ -463,3 +463,17 @@ Body:
           - Index: 2
             Item: Marionette_Doll
             Amount: 1
+      - Index: 29
+        Item: Sunglasses_
+        Stock: 0
+        Zeny: 100000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 3500
+          - Index: 1
+            Item: Glass_Bead
+            Amount: 1500
+          - Index: 2
+            Item: Sunglasses
+            Amount: 1

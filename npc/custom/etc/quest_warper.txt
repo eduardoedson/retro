@@ -1470,6 +1470,20 @@ function	script	QWS_Darray	{
 
 	QWS_Make_Dungeon_Menu 28;
 
+//----------------Moskovia Dungeon
+	setarray @pDmenuitems$[@Di], "Moskovia Dungeon";
+	setarray @pDprice[@Di], $QW_AW_PRICE;
+	setarray @pDfee$[@Di], "$QW_AW_FEE";
+	setarray @DLevels[@Di], 3;
+
+	setarray @DGat$[@Dref], "mosk_dun01", "mosk_dun02", "mosk_dun03";
+	setarray @DLevelName$[@Dref], "Les Forest", "Temny Forest", "Dremuci forest";
+	setarray @DXcoords[@Dref], 189, 165, 30;
+	setarray @DYcoords[@Dref], 47, 29, 134;
+	setarray @DDepth[@Dref], 0, 1, 2;
+
+	QWS_Make_Dungeon_Menu 29;
+
 //----------------Cancel
 	setarray @pDmenuitems$[@Di], "Cancel";
 	setarray @pDprice[@Di], 0;
@@ -1718,3 +1732,4 @@ um_dun02,44,28,3	script	Dimensius#72	10308,{ callfunc "QWS_Dungeon_Warpra",27,"U
 tur_dun02,162,23,3	script	Dimensius#73	10308,{ callfunc "QWS_Dungeon_Warpra",26,"Turtle Island Dungeon"; close; }
 prt_maze02,102,69,4	script	Dimensius#74	10308,{ callfunc "QWS_Dungeon_Warpra",13,"Hidden Dungeon"; close; }
 lhz_dun04,241,56,4	script	Dimensius#75	10308,{ callfunc "QWS_Dungeon_Warpra",28,"Hidden Dungeon"; close; }
+mosk_dun03,220,225,4	script	Dimensius#75	10308,{ callfunc "QWS_Dungeon_Warpra",29,"Hidden Dungeon"; close; }
