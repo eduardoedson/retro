@@ -1,0 +1,174 @@
+in_rogue,386,98,3	script	Plagiarism Master	4_GHOST_STAND,{
+
+	// ---------------- ACCESS CHECK ----------------
+	if (Class != Job_Rogue && Class != Job_Stalker) {
+		mes("[ Plagiarism Master ]");
+		mes("Only Rogues and Stalkers can use this service.");
+		close;
+	}
+
+	mes("[ Plagiarism Master ]");
+	mes("Choose a skill category:");
+	next;
+
+	switch (select(
+		"- Swordman Skills",
+		"- Knight Skills",
+		"- Crusader Skills",
+		"- Mage Skills",
+		"- Wizard Skills",
+		"- Archer Skills",
+		"- Hunter Skills",
+		"- Acolyte Skills",
+		"- Priest Skills",
+		"- Monk Skills",
+		"- Merchant Skills",
+		"- Alchemist Skills",
+		"- Thief Skills",
+		"- Assassin Skills",
+		"- Rogue Skills",
+		"- Taekwon Skills",
+		"- Ninja Skills",
+		"- View Current Plagiarism",
+		"- Reset Plagiarism",
+		"- Cancel"
+	)) {
+
+	// ================== Swordman ==================
+	case 1:
+		setarray(.@skills, 5, 7);
+		setarray(.@levels, 10, 10);
+		break;
+	// ================== Knight ==================
+	case 2:
+		setarray(.@skills, 62, 1001);
+		setarray(.@levels, 10, 1);
+		break;
+	// ================== Crusader ==================
+	case 3:
+		setarray(.@skills, 28, 250, 251, 253, 254);
+		setarray(.@levels, 10, 5, 5, 10, 10);
+		break;
+	// ================== Mage ==================
+	case 4:
+		setarray(.@skills, 11, 13, 14, 15, 17, 18, 19, 20, 21);
+		setarray(.@levels, 10, 10, 10, 10, 10, 10, 10, 10, 10);
+		break;
+	// ================== Wizard ==================
+	case 5:
+		setarray(.@skills, 80, 81, 83, 84, 85, 86, 88, 89, 90, 91, 1006);
+		setarray(.@levels, 10, 10, 10, 10, 10, 5, 10, 10, 5, 5, 1);
+		break;
+	// ================== Archer ==================
+	case 6:
+		setarray(.@skills, 46, 47, 148);
+		setarray(.@levels, 10, 10, 1);
+		break;
+	// ================== Hunter ==================
+	case 7:
+		setarray(.@skills, 116, 121, 122, 123, 1009);
+		setarray(.@levels, 5, 5, 5, 5, 1);
+		break;
+	// ================== Acolyte ==================
+	case 8:
+		setarray(.@skills, 24, 28, 156);
+		setarray(.@levels, 1, 10, 1);
+		break;
+	// ================== Priest ==================
+	case 9:
+		setarray(.@skills, 54, 68, 69, 70, 77, 79);
+		setarray(.@levels, 4, 5, 5, 10, 10, 10);
+		break;
+	// ================== Monk ==================
+	case 10:
+		setarray(.@skills, 263, 266, 267, 271, 272, 1015);
+		setarray(.@levels, 10, 5, 5, 5, 5, 1);
+		break;
+	// ================== Merchant ==================
+	case 11:
+		setarray(.@skills, 42);
+		setarray(.@levels, 10);
+		break;
+	// ================== Alchemist ==================
+	case 12:
+		setarray(.@skills, 229, 230);
+		setarray(.@levels, 5, 5);
+		break;
+	// ================== Thief ==================
+	case 13:
+		setarray(.@skills, 52, 152);
+		setarray(.@levels, 10, 1);
+		break;
+	// ================== Assassin ==================
+	case 14:
+		setarray(.@skills, 141, 1004);
+		setarray(.@levels, 10, 1);
+		break;
+	// ================== Rogue ==================
+	case 15:
+		setarray(.@skills, 212);
+		setarray(.@levels, 10);
+		break;
+	// ================== Taekwon ==================
+	case 16:
+		setarray(.@skills, 421);
+		setarray(.@levels, 7);
+		break;
+	// ================== Ninja ==================
+	case 17:
+		setarray(.@skills, 526, 527, 528, 529, 530, 531, 534, 535, 536, 537, 539, 540, 541, 542);
+		setarray(.@levels, 10, 5, 10, 5, 5, 5, 10, 10, 5, 10, 5, 10, 5, 5);
+		break;
+	// ================== VIEW CURRENT ==================
+	case 18:
+		mes("[ Plagiarism Master ]");
+		.@sid = getplagiarizedskill(1);
+		if (.@sid > 0)
+			mes(getskilldesc(.@sid) + " Lv." + getplagiarizedskilllv(1));
+		else
+			mes("No skill plagiarized.");
+		close;
+
+	// ================== RESET ==================
+	case 19:
+		if (getstatus(SC_PRESERVE))
+			sc_end SC_PRESERVE;
+		plagiarizeskillreset 1;
+		mes("[ Plagiarism Master ]");
+		mes("Plagiarism reset.");
+		close;
+
+	default:
+		close;
+	}
+
+	// ---------------- BUILD TEXT MENU ----------------
+	.@menu$ = "";
+	for (.@i = 0; .@i < getarraysize(.@skills); .@i++) {
+		.@menu$ += getskilldesc(.@skills[.@i]) + ":";
+	}
+
+	.@choice = select(.@menu$);
+	.@index = .@choice - 1;
+
+	.@skill = .@skills[.@index];
+	.@level = .@levels[.@index];
+
+	// ---------------- PRESERVE ----------------
+	if (getstatus(SC_PRESERVE))
+		sc_end SC_PRESERVE;
+
+	// ---------------- APPLY ----------------
+	if (plagiarizeskill(.@skill, .@level)) {
+		specialeffect2 EF_STEAL;
+		mes("[ Plagiarism Master ]");
+		mes("Skill copied successfully!");
+		mes(getskilldesc(.@skill) + " Lv." + .@level);
+	} else {
+		mes("[ Plagiarism Master ]");
+		mes("This skill cannot be plagiarized.");
+		mes("Check skill_db.yml:");
+		mes("Copyable: Plagiarism: true");
+	}
+	close;
+}
