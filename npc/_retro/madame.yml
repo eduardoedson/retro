@@ -54,14 +54,14 @@ Body:
           - Index: 0
             Item: Bronze_Coin_Custom
             Amount: 2
-      - Index: 5
-        Item: F_Kafra_Card
-        Stock: 0
-        Zeny: 0
-        RequiredItems:
-          - Index: 0
-            Item: Bronze_Coin_Custom
-            Amount: 20
+#      - Index: 5
+#        Item: F_Kafra_Card
+#        Stock: 0
+#        Zeny: 0
+#        RequiredItems:
+#          - Index: 0
+#            Item: Bronze_Coin_Custom
+#            Amount: 20
       - Index: 6
         Item: C_Wing_Of_Fly
         Stock: 0
@@ -86,38 +86,38 @@ Body:
           - Index: 0
             Item: Bronze_Coin_Custom
             Amount: 5
-      - Index: 10
-        Item: WOB_Local
-        Stock: 0
-        Zeny: 0
-        RequiredItems:
-          - Index: 0
-            Item: Bronze_Coin_Custom
-            Amount: 10
-      - Index: 11
-        Item: WOB_Schwaltz
-        Stock: 0
-        Zeny: 0
-        RequiredItems:
-          - Index: 0
-            Item: Bronze_Coin_Custom
-            Amount: 10
-      - Index: 12
-        Item: WOB_Rachel
-        Stock: 0
-        Zeny: 0
-        RequiredItems:
-          - Index: 0
-            Item: Bronze_Coin_Custom
-            Amount: 10
-      - Index: 13
-        Item: WOB_Rune
-        Stock: 0
-        Zeny: 0
-        RequiredItems:
-          - Index: 0
-            Item: Bronze_Coin_Custom
-            Amount: 10
+#      - Index: 10
+#        Item: WOB_Local
+#        Stock: 0
+#        Zeny: 0
+#        RequiredItems:
+#          - Index: 0
+#            Item: Bronze_Coin_Custom
+#            Amount: 10
+#      - Index: 11
+#        Item: WOB_Schwaltz
+#        Stock: 0
+#        Zeny: 0
+#        RequiredItems:
+#          - Index: 0
+#            Item: Bronze_Coin_Custom
+#            Amount: 10
+#      - Index: 12
+#        Item: WOB_Rachel
+#        Stock: 0
+#        Zeny: 0
+#        RequiredItems:
+#          - Index: 0
+#            Item: Bronze_Coin_Custom
+#            Amount: 10
+#      - Index: 13
+#        Item: WOB_Rune
+#        Stock: 0
+#        Zeny: 0
+#        RequiredItems:
+#          - Index: 0
+#            Item: Bronze_Coin_Custom
+#            Amount: 10
       - Index: 14
         Item: Max_Weight_Up_Scroll
         Stock: 0

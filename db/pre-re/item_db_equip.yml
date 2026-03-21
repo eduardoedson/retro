@@ -31672,10 +31672,6 @@ Body:
     EquipLevelMin: 30
     Refineable: true
     View: 393
-    Trade:
-      NoDrop: true
-      NoSell: true
-      NoGuildStorage: true
     Script: |
       skill "TF_DOUBLE",5;
   - Id: 5389

@@ -1,0 +1,96 @@
+geffen,127,59,3	script	Geffenia Explorer	4_F_ESTLOVELOY,{
+
+	// Quest flag variable
+	.@quest_done = #geffenia_access;
+
+	mes "[Geffenia Explorer]";
+
+	// If player already completed quest
+	if (.@quest_done) {
+		mes "Ah... I recognize that aura.";
+		mes "You have already walked the cursed lands of ^880000Geffenia^000000.";
+		next;
+
+		mes "[Geffenia Explorer]";
+		mes "The seal has already acknowledged you.";
+		mes "You no longer need to prove yourself.";
+		next;
+
+		mes "[Geffenia Explorer]";
+		mes "Use what I gave you wisely...";
+		mes "Not everyone survives a second journey.";
+		close;
+	}
+
+	mes "You seek something beyond ordinary knowledge...";
+	next;
+
+	mes "[Geffenia Explorer]";
+	mes "Geffenia... a forbidden realm filled with demonic energy.";
+	mes "A place where only the strongest dare to enter.";
+	next;
+
+	mes "[Geffenia Explorer]";
+	mes "If you wish to access it, you must prove your worth.";
+	next;
+
+	switch(select("What do I need?:Leave.")) {
+		case 1:
+
+			// Item requirements (array)
+			setarray .@items[0], 2278,914,7033,904,930,1038,1092,610,511,526,518,948,520,708,713,612,615,988,1097,2203,907,953,7013; // item IDs
+			setarray .@amounts[0], 1,100,50,30,20,15,10,2,10,10,20,30,1,1,1,5,2,1,10,1,4,12,375;       // required amounts
+			.@size = getarraysize(.@items);
+
+			mes "[Geffenia Explorer]";
+			mes "Bring me the following items:";
+			next;
+
+			// Show requirements
+			for (.@i = 0; .@i < .@size; .@i++) {
+				mes "^FF0000- " + .@amounts[.@i] + "x " + getitemname(.@items[.@i]) + "^000000";
+			}
+			next;
+
+			// Check items
+			for (.@i = 0; .@i < .@size; .@i++) {
+				if (countitem(.@items[.@i]) < .@amounts[.@i]) {
+					mes "[Geffenia Explorer]";
+					mes "You are still missing some items.";
+					mes "Come back when you have everything.";
+					close;
+				}
+			}
+
+			mes "[Geffenia Explorer]";
+			mes "Excellent... You brought everything.";
+			next;
+
+			// Remove items
+			for (.@i = 0; .@i < .@size; .@i++) {
+				delitem .@items[.@i], .@amounts[.@i];
+			}
+
+			// Give access item (optional)
+			getitem 2644,1;
+			getitem 7025,1;
+
+			// Set quest flag
+			#geffenia_access = 1;
+
+			mes "[Geffenia Explorer]";
+			mes "Take this ^00FF00Geffenia Sigil^000000.";
+			mes "It grants you access to the cursed domain.";
+			next;
+
+			mes "[Geffenia Explorer]";
+			mes "From now on, the path will remain open to you.";
+			mes "Do not take this lightly.";
+			close;
+
+		case 2:
+			mes "[Geffenia Explorer]";
+			mes "Some knowledge is better left untouched...";
+			close;
+	}
+}

@@ -77,17 +77,18 @@ S_MVPKillHandler:
 	// killedrid = ID of the defeated monster
 	.@mob_id = killedrid;
 
-	// Check if the monster is an MVP:
-	// MVPs in rAthena have MOB_MVPEXP > 0
+	// Check if the monster is an MVP
+	// MVP monsters have MOB_MVPEXP > 0
 	if (getmonsterinfo(.@mob_id, MOB_MVPEXP) <= 0)
 		return;
 
 	// Retrieve MVP and killer information
 	.@mob_name$    = getmonsterinfo(.@mob_id, MOB_NAME);
-	.@killer_name$ = strcharinfo(0);
-	.@map_name$    = strcharinfo(3);
+	.@killer_name$ = strcharinfo(0); // Character name
+	.@map_name$    = strcharinfo(3); // Map name
 
-	// Global announcement
-	announce "'" + .@killer_name$ + "' has defeated the MVP " + .@mob_name$, bc_all, 0xD67FFF;
+	// Global announcement with variables between brackets
+	announce "[" + .@killer_name$ + "] killed the MvP [" + .@mob_name$ + "] on map [" + .@map_name$ + "]", bc_all, 0xD67FFF;
+
 	return;
 }

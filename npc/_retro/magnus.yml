@@ -477,3 +477,14 @@ Body:
           - Index: 2
             Item: Sunglasses
             Amount: 1
+      - Index: 30
+        Item: Snake_Head
+        Stock: 0
+        Zeny: 2500000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 5000
+          - Index: 1
+            Item: Chick_Hat
+            Amount: 1

@@ -1,8 +1,8 @@
 //===== rAthena Script =======================================
 //= Mapflag: Disable skill use.
-//===== Description: ========================================= 
+//===== Description: =========================================
 //= Disables all skills on the map.
-//===== Additional Comments: ================================= 
+//===== Additional Comments: =================================
 //= 1.1 Added additional maps. [L0ne_W0lf]
 //============================================================
 
@@ -35,3 +35,4 @@ p_track02	mapflag	noskill
 // Events
 //============================================================
 //evt_zombie	mapflag	noskill
+moc_para01	mapflag	noskill

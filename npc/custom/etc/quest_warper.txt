@@ -1199,7 +1199,7 @@ function	script	QWS_Darray	{
 	setarray @DGat$[@Dref], "gef_dun00", "gef_dun01", "gef_dun02", "gef_dun03";
 	setarray @DLevelName$[@Dref], "Level 1", "Level 2", "Level 3", "Level 4";
 	setarray @DXcoords[@Dref], 104, 115, 106, 203;
-	setarray @DYcoords[@Dref], 100, 236, 132, 200;
+	setarray @DYcoords[@Dref], 99, 236, 132, 200;
 	setarray @DDepth[@Dref], 0, 1, 2, 3;
 
 	QWS_Make_Dungeon_Menu 10;
@@ -1484,6 +1484,48 @@ function	script	QWS_Darray	{
 
 	QWS_Make_Dungeon_Menu 29;
 
+//----------------Rachel Temple Dungeon
+	setarray @pDmenuitems$[@Di], "Rachel Temple Sanctuary";
+	setarray @pDprice[@Di], $QW_AW_PRICE;
+	setarray @pDfee$[@Di], "$QW_AW_FEE";
+	setarray @DLevels[@Di], 3;
+
+	setarray @DGat$[@Dref], "ra_san01", "ra_san02", "ra_san03", "ra_san04", "ra_san05";
+	setarray @DLevelName$[@Dref], "North Area 1F", "West Area 1F", "East Area 1F", "South Area 1F", "Centra Area 2f";
+	setarray @DXcoords[@Dref], 139, 11, 10, 120, 150;
+	setarray @DYcoords[@Dref], 134, 150, 149, 100, 11;
+	setarray @DDepth[@Dref], 0, 1, 2, 3, 4;
+
+	QWS_Make_Dungeon_Menu 30;
+
+//----------------Abbey Dungeon
+	setarray @pDmenuitems$[@Di], "Cursed Abbey Dungeon";
+	setarray @pDprice[@Di], $QW_AW_PRICE;
+	setarray @pDfee$[@Di], "$QW_AW_FEE";
+	setarray @DLevels[@Di], 3;
+
+	setarray @DGat$[@Dref], "abbey01", "abbey02", "abbey03";
+	setarray @DLevelName$[@Dref], "Cursed Abbey Dungeon B1", "Cursed Abbey Dungeon B2", "Cursed Abbey Dungeon B3";
+	setarray @DXcoords[@Dref], 52, 149, 114;
+	setarray @DYcoords[@Dref], 52, 14, 4;
+	setarray @DDepth[@Dref], 0, 1, 2;
+
+	QWS_Make_Dungeon_Menu 31;
+
+//----------------Geffenia Dungeon
+	setarray @pDmenuitems$[@Di], "Geffenia Dungeon";
+	setarray @pDprice[@Di], $QW_AW_PRICE;
+	setarray @pDfee$[@Di], "$QW_AW_FEE";
+	setarray @DLevels[@Di], 4;
+
+	setarray @DGat$[@Dref], "gefenia01", "gefenia02", "gefenia03", "gefenia04";
+	setarray @DLevelName$[@Dref], "Geffenia Dungeon B1", "Geffenia Dungeon B2", "Geffenia Dungeon B3", "Geffenia Dungeon B4";
+	setarray @DXcoords[@Dref], 0, 0, 0, 0;
+	setarray @DYcoords[@Dref], 0, 0, 0, 0;
+	setarray @DDepth[@Dref], 0, 1, 2, 3;
+
+	QWS_Make_Dungeon_Menu 32;
+
 //----------------Cancel
 	setarray @pDmenuitems$[@Di], "Cancel";
 	setarray @pDprice[@Di], 0;
@@ -1732,4 +1774,7 @@ um_dun02,44,28,3	script	Dimensius#72	10308,{ callfunc "QWS_Dungeon_Warpra",27,"U
 tur_dun02,162,23,3	script	Dimensius#73	10308,{ callfunc "QWS_Dungeon_Warpra",26,"Turtle Island Dungeon"; close; }
 prt_maze02,102,69,4	script	Dimensius#74	10308,{ callfunc "QWS_Dungeon_Warpra",13,"Hidden Dungeon"; close; }
 lhz_dun04,241,56,4	script	Dimensius#75	10308,{ callfunc "QWS_Dungeon_Warpra",28,"Hidden Dungeon"; close; }
-mosk_dun03,220,225,4	script	Dimensius#75	10308,{ callfunc "QWS_Dungeon_Warpra",29,"Hidden Dungeon"; close; }
+mosk_dun03,220,225,4	script	Dimensius#76	10308,{ callfunc "QWS_Dungeon_Warpra",29,"Hidden Dungeon"; close; }
+ra_san05,157,157,4	script	Dimensius#77	10308,{ callfunc "QWS_Dungeon_Warpra",30,"Hidden Dungeon"; close; }
+abbey03,114,4,4	script	Dimensius#78	10308,{ callfunc "QWS_Dungeon_Warpra",31,"Hidden Dungeon"; close; }
+gefenia01,61,165,4	script	Dimensius#79	10308,{ callfunc "QWS_Dungeon_Warpra",32,"Hidden Dungeon"; close; }

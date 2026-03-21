@@ -1,0 +1,184 @@
+#==============================================================
+# Custom Barter Database - Julius
+#==============================================================
+
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: Rochelle
+    Map: aldebaran
+    X: 121
+    Y: 102
+    Direction: East
+    Sprite: 4_F_GEFFEN_FAY
+    Items:
+      - Index: 0
+        Item: Coating_Bottle
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 10
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 5
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 1
+      - Index: 1
+        Item: Coating_Bottle_10_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 90
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 45
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 9
+      - Index: 2
+        Item: Coating_Bottle_50_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 450
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 225
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 45
+      - Index: 3
+        Item: Coating_Bottle_100_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 900
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 450
+          - Index: 3
+            Item: Gold_Coin_Custom
+            Amount: 90
+      - Index: 4
+        Item: Acid_Bottle
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 10
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 5
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 1
+      - Index: 5
+        Item: Acid_Bottle_10_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 90
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 45
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 9
+      - Index: 6
+        Item: Acid_Bottle_50_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 450
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 225
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 45
+      - Index: 7
+        Item: Acid_Bottle_100_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 900
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 450
+          - Index: 3
+            Item: Gold_Coin_Custom
+            Amount: 90
+      - Index: 8
+        Item: Fire_Bottle
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 10
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 5
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 1
+      - Index: 9
+        Item: Fire_Bottle_10_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 90
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 45
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 9
+      - Index: 10
+        Item: Fire_Bottle_50_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 450
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 225
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 45
+      - Index: 11
+        Item: Fire_Bottle_100_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 900
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 450
+          - Index: 3
+            Item: Gold_Coin_Custom
+            Amount: 90

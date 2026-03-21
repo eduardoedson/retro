@@ -1,0 +1,41 @@
+sec_in02,137,164,4	script	VIP Entrance	100,{
+
+	.@account_id = getcharid(3);
+
+	// Get VIP time from database
+	query_sql "SELECT vip_time FROM login WHERE account_id = "+.@account_id, .@vip_time;
+
+	.@now = gettimetick(2);
+
+	if (.@vip_time <= .@now) {
+		mes "[VIP Entrance]";
+		mes "You are not VIP.";
+		mes "Access denied.";
+		close;
+	}
+
+	// Calculate remaining time
+	.@seconds = .@vip_time - .@now;
+
+	.@days = .@seconds / 86400;
+	.@seconds = .@seconds % 86400;
+
+	.@hours = .@seconds / 3600;
+	.@seconds = .@seconds % 3600;
+
+	.@minutes = .@seconds / 60;
+
+	mes "[VIP Entrance]";
+	mes "Welcome VIP player!";
+	mes "Remaining VIP time:";
+	mes .@days+" days, "+.@hours+" hours, "+.@minutes+" minutes.";
+	next;
+
+	switch(select("Enter VIP Room:Cancel")) {
+		case 1:
+			warp "sec_in02",142,162;
+			close;
+		case 2:
+			close;
+	}
+}

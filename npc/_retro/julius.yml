@@ -1,0 +1,72 @@
+#==============================================================
+# Custom Barter Database - Julius
+#==============================================================
+
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: Julius
+    Map: morocc
+    X: 145
+    Y: 82
+    Direction: East
+    Sprite: 4_M_GUILLOTINE
+    Items:
+      - Index: 0
+        Item: Poison_Bottle
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 10
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 5
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 1
+      - Index: 1
+        Item: _Poison_Bottle_10_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 90
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 45
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 9
+      - Index: 2
+        Item: Poison_Bottle_50_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 450
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 225
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 45
+      - Index: 3
+        Item: Poison_Bottle_100_Box
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 900
+          - Index: 1
+            Item: Silver_Coin_Custom
+            Amount: 450
+          - Index: 2
+            Item: Gold_Coin_Custom
+            Amount: 90
