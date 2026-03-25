@@ -1,0 +1,193 @@
+sec_in02,142,166,4	script	Stuart	4_M_RACHOLD1,{
+
+MainMenu:
+
+	.@sel = select("Dungeons:Cities:Fields:Farm:Castles:Cancel");
+
+	if (.@sel == 1) goto Dungeons;
+	if (.@sel == 2) goto Cities;
+	if (.@sel == 3) goto Fields;
+	if (.@sel == 4) goto Farm;
+	if (.@sel == 5) goto Castles;
+	close;
+
+
+// ==============================
+// DUNGEONS
+// ==============================
+Dungeons:
+
+	setarray .@name$[0],
+		"Abyss Lake",
+		"Amatsu Dungeon",
+		"Ant Hell Dungeon",
+		"Ayothaya Dungeon",
+		"Einbech Dungeon",
+		"Byalan Dungeon",
+		"Clock Tower Dungeon",
+		"Coal Mine Dungeon",
+		"Culvert Dungeon",
+		"Gefenia Dungeon",
+		"Gefen Dungeon",
+		"Glast Heim Dungeon",
+		"Kunlun Dungeon",
+		"Juperos Cave",
+		"Kiel Dungeon",
+		"Lighthalzen Bio Lab",
+		"Luoyang Dungeon",
+		"Magma Dungeon",
+		"Odin Temple",
+		"Orc Dungeon",
+		"Payon Dungeon",
+		"Pyramids Dungeon",
+		"Sphinx Dungeon",
+		"Thanatos Tower",
+		"Sunken Ship Dungeon",
+		"Toy Factory Dungeon",
+		"Umbala Dungeon",
+		"Turtle Island Dungeon",
+		"Labyrinth Forest",
+		"Somatology Laboratory 4th",
+		"Moskovia",
+		"Rachel Temple",
+		"Cursed Abbey Dungeon";
+
+	setarray .@map$[0],
+		"abyss_02","ama_dun02","anthell02","ayo_dun02","ein_dun02","iz_dun03",
+		"c_tower3","mjo_dun02","prt_sewb2","gefenia03","gef_dun02","glast_01",
+		"gon_dun01","juperos_02","kh_dun01","lhz_dun02","lou_dun02","mag_dun02",
+		"odin_tem01","orcsdun01","pay_dun03","moc_pryd02","in_sphinx2","tha_t07",
+		"treasure02","xmas_dun02","um_dun02","tur_dun02","prt_maze02","lhz_dun04",
+		"mosk_dun03","ra_san05","abbey03";
+
+	setarray .@x[0],
+		274,192,170,258,292,202,129,39,176,137,218,371,167,127,14,156,168,46,
+		115,185,162,101,274,111,104,124,44,162,102,241,220,157,114;
+
+	setarray .@y[0],
+		266,118,165,193,282,47,106,25,30,34,61,308,273,154,224,151,264,41,
+		148,11,143,95,268,162,40,131,28,23,69,56,225,157,4;
+
+	goto BuildMenu;
+
+
+// ==============================
+// CITIES
+// ==============================
+Cities:
+
+	setarray .@name$[0],
+		"Prontera","Izlude","Geffen","Payon","Morroc","Alberta","Aldebaran",
+		"Comodo","Amatsu","Ayothaya","Einbroch","Einbech","Lighthalzen","Hugel",
+		"Rachel","Veins","Yuno","Moscovia","Umbala","Lutie","Kunlun","Luoyang",
+		"Niflheim","Midgard Camp";
+
+	setarray .@map$[0],
+		"prontera","izlude","geffen","payon","morocc","alberta","aldebaran",
+		"comodo","amatsu","ayothaya","einbroch","einbech","lighthalzen","hugel",
+		"rachel","veins","yuno","moscovia","umbala","xmas","gonryun","louyang",
+		"nif_fild01","mid_camp";
+
+	setarray .@x[0],
+		160,132,116,178,154,32,146,192,199,212,244,183,162,97,112,214,150,216,
+		133,150,160,211,319,208;
+
+	setarray .@y[0],
+		191,121,66,105,99,240,118,154,79,173,207,133,103,167,141,123,188,196,
+		130,134,127,106,77,242;
+
+	goto BuildMenu;
+
+
+// ==============================
+// FIELDS
+// ==============================
+Fields:
+
+	setarray .@name$[0],
+		"Alberta Treasure","Amatsu Field","Geffen Field","Izlude Entrance",
+		"Mjolnir Field","Morroc Field","Morroc Ruins","Prontera Field","Yuno Field";
+
+	setarray .@map$[0],
+		"alb2trea","ama_fild01","gef_fild10","izlu2dun","mjolnir_02",
+		"moc_fild19","moc_ruins","prt_fild05","yuno_fild03";
+
+	setarray .@x[0],
+		84,178,67,111,84,106,64,273,37;
+
+	setarray .@y[0],
+		110,325,338,87,365,97,166,215,135;
+
+	goto BuildMenu;
+
+
+// ==============================
+// FARM
+// ==============================
+Farm:
+
+	setarray .@name$[0],
+		"Ores",
+		"Silver Coin";
+
+	setarray .@map$[0],
+		"lhz_dun04",
+		"nif_dun01";
+
+	setarray .@x[0],
+		145,
+		0;
+
+	setarray .@y[0],
+		276,
+		0;
+
+	goto BuildMenu;
+
+
+// ==============================
+// CASTLES (WOE)
+// ==============================
+Castles:
+
+	setarray .@name$[0],
+		"Kriemhild";
+
+	setarray .@map$[0],
+		"prt_gld";
+
+	setarray .@x[0],
+		134;
+
+	setarray .@y[0],
+		65;
+
+	goto BuildMenu;
+
+
+// ==============================
+// MENU BUILDER
+// ==============================
+BuildMenu:
+
+	.@menu$ = "";
+
+	for (.@i = 0; .@i < getarraysize(.@name$); .@i++) {
+		.@menu$ += .@name$[.@i] + ":";
+	}
+
+	.@menu$ += "Back";
+
+	.@sel = select(.@menu$);
+
+	if (.@sel == getarraysize(.@name$) + 1)
+		goto MainMenu;
+
+	.@index = .@sel - 1;
+
+	specialeffect2 EF_TELEPORTATION;
+
+	warp .@map$[.@index], .@x[.@index], .@y[.@index];
+
+	close;
+}

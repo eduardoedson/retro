@@ -9,8 +9,8 @@
 niflheim,149,124,0	warp	nif01#1	1,1,nif_dun01,145,85
 nif_dun01,146,82,0	warp	nif#1	1,1,niflheim,146,122
 nif_dun01,146,34,0	warp	nif02#1	1,1,nif_dun02,149,23
-nif_dun02,162,14,0	warp	nif01#1	1,1,nif_dun01,146,39
-nif_dun02,138,14,0	warp	nif01#2	1,1,nif_dun01,146,39
+nif_dun02,162,14,0	warp	nif01#2	1,1,nif_dun01,146,39
+nif_dun02,138,14,0	warp	nif01#3	1,1,nif_dun01,146,39
 
 nif_dun01	monster	Gan Ceann	GAN_CEANN,60
 nif_dun01	monster	Brutal Murderer	BRUTAL_MURDERER,60

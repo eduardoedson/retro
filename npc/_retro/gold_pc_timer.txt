@@ -10,9 +10,13 @@ prt_in,45,117,5	script	Goldpoint Manager::GOLDPCCAFE	4_TREASURE_BOX,{
 
 	// Format: "ITEM_ID:AMOUNT:COST_IN_POINTS"
 	setarray .items$[1],
-		"1230003:1:120",
-		"1230003:2:210",
-		"1230003:3:300";
+		"1230001:100:100",
+		"1230002:50:200",
+		"1230003:25:200",
+		"1230048:1:300",
+		"1230090:1:300",
+		"1230089:1:300",
+		"1230091:1:300";
 
 	mes "[Goldpoint Manager]";
 	mes "You currently have ^0000ff"+#Goldpc_Points+"^000000 points.";

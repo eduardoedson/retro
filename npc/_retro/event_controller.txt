@@ -48,25 +48,62 @@ S_CardDropHandler:
 // Sub: GlobalDrop logic
 //----------------------------------------------------------
 S_GlobalDropHandler:
-
 	//-----------------------------------------
-	// Global drop (any monster)
+	// Config
 	//-----------------------------------------
 	.@item_id     = 1230001;
-	.@item_chance = 500;    // 500 = 5.00%
-
-	if (rand(10000) < .@item_chance)
-		getitem .@item_id, 1;
+	.@item_chance = 500; // 500 = 5%
 
 	//-----------------------------------------
-	// 100% drop exclusively for MVP
+	// Blocked monster IDs (NPC scope)
 	//-----------------------------------------
-	// If MvPExp > 0 → it's MVP (no mini-boss)
-	if (getmonsterinfo(killedrid, MOB_MVPEXP) > 0) {
+	setarray .blocked_mobs[0],
+		1153, // Orc Zombie
+		1017, // Thief Bug Female
+		1021, // Thief Bug Male
+		1005, // Familiar
+		1068, // Hydra
+		1003, // Thief Bug Egg
+		1047, // Peco Peco Egg
+		1097, // Ant Egg
+		1078, // Red Plant
+		1079, // Blue Plant
+		1080, // Green Plant
+		1081, // Yellow Plant
+		1082, // White Plant
+		1083, // Shining Plant
+		1051, // Thief Bug
+		1175, // Tarou
+		1161; // Plankton
 
-		.@mvp_item = 1230003; // MVP-only reward, 100% chance
-		getitem .@mvp_item, 1;
+	//-----------------------------------------
+	// Check if blocked
+	//-----------------------------------------
+	.@is_blocked = 0;
+	for (.@i = 0; .@i < getarraysize(.blocked_mobs); .@i++) {
+		if (killedrid == .blocked_mobs[.@i]) {
+			.@is_blocked = 1;
+			break;
+		}
 	}
+
+	//-----------------------------------------
+	// MVP (ignora bloqueio)
+	//-----------------------------------------
+	if (getmonsterinfo(killedrid, MOB_MVPEXP) > 0) {
+		getitem 1230003, 1;
+		return;
+	}
+
+	//-----------------------------------------
+	// Global drop
+	//-----------------------------------------
+	if (!.@is_blocked) {
+		if (rand(10000) < .@item_chance) {
+			getitem .@item_id, 1;
+		}
+	}
+
 	return;
 
 //----------------------------------------------------------

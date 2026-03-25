@@ -199,8 +199,8 @@ Body:
       Player: true
     Level: 0
     Commands:
-      rates: true
-      who: true
+      storage: true
+      gstorage: true
   - Id: 10
     Name: Law Enforcement
     Inherit:

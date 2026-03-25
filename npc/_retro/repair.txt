@@ -1,0 +1,17 @@
+sec_in02,130,166,5	script	Lucius	2_M_OLDBLSMITH,{
+
+	// Check if player has broken items
+	if (!getbrokenid(1)) {
+		dispbottom "No broken equipment.";
+		close;
+	}
+
+	// Visual effect
+	specialeffect2 EF_REPAIR;
+
+	// Repair all items
+	repairall;
+
+	dispbottom "All equipment repaired.";
+	close;
+}

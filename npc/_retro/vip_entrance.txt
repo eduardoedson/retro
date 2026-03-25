@@ -1,9 +1,16 @@
-sec_in02,137,164,4	script	VIP Entrance	100,{
+prontera,153,189,5	script	VIP Entrance	4_F_NURSE,{
 
 	.@account_id = getcharid(3);
 
 	// Get VIP time from database
 	query_sql "SELECT vip_time FROM login WHERE account_id = "+.@account_id, .@vip_time;
+
+	// Safety check
+	if (.@vip_time == 0) {
+		mes "[VIP Entrance]";
+		mes "VIP data not found.";
+		close;
+	}
 
 	.@now = gettimetick(2);
 
@@ -39,3 +46,6 @@ sec_in02,137,164,4	script	VIP Entrance	100,{
 			close;
 	}
 }
+
+sec_in02,149,162,0	warp	vip#1	1,1,prontera,155,186
+sec_in02,161,162,0	warp	vip#2	1,1,sec_in02,142,162

@@ -488,3 +488,21 @@ Body:
           - Index: 1
             Item: Chick_Hat
             Amount: 1
+      - Index: 31
+        Item: New_Cowboy_Hat
+        Stock: 0
+        Zeny: 2500000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 3500
+          - Index: 1
+            Item: The_Garrison
+            Amount: 2
+          - Index: 2
+            Item: Cigar
+            Amount: 1
+          - Index: 3
+            Item: Matchstick
+            Amount: 50
+
