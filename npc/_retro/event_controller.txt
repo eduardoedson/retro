@@ -48,11 +48,27 @@ S_CardDropHandler:
 // Sub: GlobalDrop logic
 //----------------------------------------------------------
 S_GlobalDropHandler:
+
+	//-----------------------------------------
+	// MVP sempre dropa
+	//-----------------------------------------
+	if (getmonsterinfo(killedrid, MOB_MVPEXP) > 0) {
+		getitem 1230003, 1;
+		return;
+	}
+
+	//-----------------------------------------
+	// Se tiver homunculus ativo → NÃO dropa
+	//-----------------------------------------
+	if (gethominfo(HOMINFO_CLASS) > 0) {
+		end;
+	}
+
 	//-----------------------------------------
 	// Config
 	//-----------------------------------------
 	.@item_id     = 1230001;
-	.@item_chance = 500; // 500 = 5%
+	.@item_chance = 500; // 5%
 
 	//-----------------------------------------
 	// Blocked monster IDs (NPC scope)
@@ -74,10 +90,11 @@ S_GlobalDropHandler:
 		1083, // Shining Plant
 		1051, // Thief Bug
 		1175, // Tarou
+		1020, // Mandragora
 		1161; // Plankton
 
 	//-----------------------------------------
-	// Check if blocked
+	// Check block
 	//-----------------------------------------
 	.@is_blocked = 0;
 	for (.@i = 0; .@i < getarraysize(.blocked_mobs); .@i++) {
@@ -85,14 +102,6 @@ S_GlobalDropHandler:
 			.@is_blocked = 1;
 			break;
 		}
-	}
-
-	//-----------------------------------------
-	// MVP (ignora bloqueio)
-	//-----------------------------------------
-	if (getmonsterinfo(killedrid, MOB_MVPEXP) > 0) {
-		getitem 1230003, 1;
-		return;
 	}
 
 	//-----------------------------------------
