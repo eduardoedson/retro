@@ -4,9 +4,9 @@ Header:
 
 Body:
   - Name: Hanna
-    Map: prt_in
-    X: 36
-    Y: 94
+    Map: moc_para01
+    X: 12
+    Y: 173
     Direction: West
     Sprite: 4_F_CHILD
     Items:
@@ -19,11 +19,8 @@ Body:
             Item: Bronze_Coin_Custom
             Amount: 1000
           - Index: 1
-            Item: Silver_Coin_Custom
-            Amount: 175
-          - Index: 2
             Item: Gold_Coin_Custom
-            Amount: 100
+            Amount: 50
       - Index: 1
         Item: F_Abrasive
         Stock: 0

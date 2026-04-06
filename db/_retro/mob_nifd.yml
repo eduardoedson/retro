@@ -1,0 +1,411 @@
+Header:
+  Type: MOB_DB
+  Version: 5
+
+Body:
+  - Id: 20938
+    AegisName: GHOST_CUBE
+    Name: Ghost Cube
+    Level: 79
+    Hp: 88378
+    BaseExp: 61000
+    JobExp: 140000
+    Attack: 2000
+    Attack2: 3600
+    Defense: 20
+    MagicDefense: 35
+    Str: 150
+    Agi: 152
+    Vit: 30
+    Int: 180
+    Dex: 186
+    Luk: 70
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 130
+    AttackDelay: 624
+    AttackMotion: 1248
+    ClientAttackMotion: 672
+    DamageMotion: 576
+    Ai: 04
+    Drops:
+      - Item: Silver_Coin_Custom
+        Rate: 300
+      - Item: Piece_Of_Black_Cloth
+        Rate: 2040
+#      - Item: Evil_Black_Bid
+#        Rate: 1575
+      - Item: Black_Powder
+        Rate: 250
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Shadowdecon
+#        Rate: 12
+#      - Item: Zelunium
+#        Rate: 12
+#      - Item: Ghost_Cube_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 20939
+    AegisName: LUDE_GAL
+    Name: Lude Gal
+    Level: 79
+    Hp: 88378
+    BaseExp: 61000
+    JobExp: 140000
+    Attack: 2000
+    Attack2: 3600
+    Defense: 20
+    MagicDefense: 35
+    Str: 150
+    Agi: 152
+    Vit: 30
+    Int: 180
+    Dex: 186
+    Luk: 70
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 130
+    AttackDelay: 480
+    AttackMotion: 960
+    ClientAttackMotion: 288
+    DamageMotion: 480
+    Ai: 04
+    Drops:
+      - Item: Silver_Coin_Custom
+        Rate: 300
+      - Item: Pumpkin_Bucket
+        Rate: 2125
+#      - Item: Ectoplasmic_Stone
+#        Rate: 1800
+      - Item: Transparent_Cloth
+        Rate: 500
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Shadowdecon
+#        Rate: 12
+#      - Item: Zelunium
+#        Rate: 12
+#      - Item: Lude_Gal_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 20937
+    AegisName: BRUTAL_MURDERER
+    Name: Brutal Murderer
+    Level: 83
+    Hp: 88378
+    BaseExp: 61000
+    JobExp: 140000
+    Attack: 2000
+    Attack2: 3600
+    Defense: 20
+    MagicDefense: 35
+    Str: 150
+    Agi: 152
+    Vit: 30
+    Int: 180
+    Dex: 186
+    Luk: 70
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 175
+    AttackDelay: 336
+    AttackMotion: 672
+    ClientAttackMotion: 480
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Silver_Coin_Custom
+        Rate: 300
+#      - Item: Heavy_Chain
+#        Rate: 1725
+      - Item: Rusty_Cleaver
+        Rate: 1360
+      - Item: Mr_Scream
+        Rate: 20
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Shadowdecon
+#        Rate: 12
+#      - Item: Zelunium
+#        Rate: 12
+#      - Item: Brutal_Murderer_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 20935
+    AegisName: GAN_CEANN
+    Name: Gan Ceann
+    Level: 84
+    Hp: 88378
+    BaseExp: 61000
+    JobExp: 140000
+    Attack: 2000
+    Attack2: 3600
+    Defense: 20
+    MagicDefense: 35
+    Str: 150
+    Agi: 152
+    Vit: 30
+    Int: 180
+    Dex: 186
+    Luk: 70
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 155
+    AttackDelay: 238
+    AttackMotion: 576
+    ClientAttackMotion: 384
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Silver_Coin_Custom
+        Rate: 300
+      - Item: Broken_Armor_Piece
+        Rate: 2040
+      - Item: Evil_Minded_Ruby
+        Rate: 1575
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Shadowdecon
+#        Rate: 12
+#      - Item: Zelunium
+#        Rate: 12
+#      - Item: Gan_Ceann_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 20941
+    AegisName: GROTE
+    Name: Grote
+    Level: 86
+    Hp: 88426
+    BaseExp: 61000
+    JobExp: 140000
+    Attack: 2000
+    Attack2: 3600
+    Defense: 20
+    MagicDefense: 35
+    Str: 150
+    Agi: 152
+    Vit: 30
+    Int: 180
+    Dex: 186
+    Luk: 70
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 180
+    AttackDelay: 792
+    AttackMotion: 1584
+    ClientAttackMotion: 1152
+    DamageMotion: 576
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Silver_Coin_Custom
+        Rate: 1200
+      - Item: Hanging_Doll
+        Rate: 1000
+      - Item: Rotten_Rope
+        Rate: 2500
+      - Item: Tree_Knot
+        Rate: 2000
+      - Item: Branch_Of_Dead_Tree
+        Rate: 5
+#      - Item: Whittling
+#        Rate: 2200
+#      - Item: Shadowdecon
+#        Rate: 25
+#      - Item: Zelunium
+#        Rate: 25
+#      - Item: Grote_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 20936
+    AegisName: DISGUISER
+    Name: Disguiser
+    Level: 87
+    Hp: 89308
+    BaseExp: 61000
+    JobExp: 140000
+    Attack: 2000
+    Attack2: 3600
+    Defense: 20
+    MagicDefense: 35
+    Str: 150
+    Agi: 152
+    Vit: 30
+    Int: 180
+    Dex: 186
+    Luk: 70
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 384
+    AttackMotion: 768
+    ClientAttackMotion: 480
+    DamageMotion: 384
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Silver_Coin_Custom
+        Rate: 1200
+      - Item: Red_Scarf
+        Rate: 2500
+      - Item: Tangled_Chain
+        Rate: 1800
+      - Item: Heavy_Chain
+        Rate: 2300
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Zelunium
+#        Rate: 25
+#      - Item: Shadowdecon
+#        Rate: 25
+#      - Item: Disguiser_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 20940
+    AegisName: BLUEMOON_LOLI_RURI
+    Name: Blue Moon Loli Ruri
+    Level: 88
+    Hp: 89308
+    BaseExp: 65000
+    JobExp: 120000
+    Attack: 1500
+    Attack2: 3100
+    Defense: 20
+    MagicDefense: 5
+    Str: 120
+    Agi: 83
+    Vit: 20
+    Int: 10
+    Dex: 166
+    Luk: 50
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 125
+    AttackDelay: 510
+    AttackMotion: 1020
+    ClientAttackMotion: 720
+    DamageMotion: 576
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Silver_Coin_Custom
+        Rate: 1200
+      - Item: Black_Kitty_Doll
+        Rate: 500
+      - Item: Striped_Socks
+        Rate: 2400
+      - Item: Bat_Cage
+        Rate: 2000
+#      - Item: Blue_Moon_Stone
+#        Rate: 2300
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Shadowdecon
+#        Rate: 25
+#      - Item: Bluemoon_Loli_Ruri_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 20942
+    AegisName: PIERROTZOIST
+    Name: Pierrotzoist
+    Level: 89
+    Hp: 89308
+    BaseExp: 65000
+    JobExp: 120000
+    Attack: 1500
+    Attack2: 3100
+    Defense: 20
+    MagicDefense: 5
+    Str: 120
+    Agi: 83
+    Vit: 20
+    Int: 10
+    Dex: 166
+    Luk: 50
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 155
+    AttackDelay: 768
+    AttackMotion: 1536
+    ClientAttackMotion: 768
+    DamageMotion: 480
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Silver_Coin_Custom
+        Rate: 1200
+      - Item: Broken_Needle
+        Rate: 2400
+      - Item: Needle_Pouch
+        Rate: 2000
+      - Item: Stuffed_Doll
+        Rate: 40
+#      - Item: Small_Sewing_Box
+#        Rate: 2100
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Zelunium
+#        Rate: 25
+#      - Item: Pierrotzoist_Card
+#        Rate: 1
+#        StealProtected: true

@@ -4,10 +4,10 @@ Header:
 
 Body:
   - Name: Magnus
-    Map: prt_in
-    X: 38
-    Y: 104
-    Direction: East
+    Map: moc_para01
+    X: 17
+    Y: 173
+    Direction: West
     Sprite: 4_M_DWARF
     Items:
       - Index: 0

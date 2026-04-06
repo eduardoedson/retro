@@ -8,10 +8,10 @@ Header:
 
 Body:
   - Name: Julius
-    Map: morocc
-    X: 145
-    Y: 82
-    Direction: East
+    Map: moc_para01
+    X: 18
+    Y: 179
+    Direction: West
     Sprite: 4_M_GUILLOTINE
     Items:
       - Index: 0

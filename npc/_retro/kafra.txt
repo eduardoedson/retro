@@ -3,7 +3,7 @@
 //= Save Point / Storage / Guild Storage / Buffs / Teleport / Cart
 //============================================================
 
-prontera,158,187,3	script	Special Assistant	4_EP17_TABLET,{
+prontera,158,187,3	script	Special Assistant::SA_MAIN	4_EP17_TABLET,{
 
 	// ----------------------------
 	// Config
@@ -177,3 +177,5 @@ prontera,158,187,3	script	Special Assistant	4_EP17_TABLET,{
 		}
 	}
 }
+
+moc_para01,33,178,3	duplicate(SA_MAIN)	Special Assistant#breakroom	4_EP17_TABLET

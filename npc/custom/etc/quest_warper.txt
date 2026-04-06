@@ -1696,20 +1696,20 @@ binget:
 //============================Warpras==============================
 
 -	script	Dimensius#0	-1,{ callfunc "Q_Warpra",1; }
-alb2trea,84,110,4	duplicate(Dimensius#0)	Dimensius#1	10308
-ama_fild01,178,325,1	duplicate(Dimensius#0)	Dimensius#2	10308
-gef_fild10,67,338,4	duplicate(Dimensius#0)	Dimensius#3	10308
-izlu2dun,111,87,4	duplicate(Dimensius#0)	Dimensius#4	10308
-mjolnir_02,84,365,4	duplicate(Dimensius#0)	Dimensius#5	10308
+//alb2trea,84,110,4	duplicate(Dimensius#0)	Dimensius#1	10308
+//ama_fild01,178,325,1	duplicate(Dimensius#0)	Dimensius#2	10308
+//gef_fild10,67,338,4	duplicate(Dimensius#0)	Dimensius#3	10308
+//izlu2dun,111,87,4	duplicate(Dimensius#0)	Dimensius#4	10308
+//mjolnir_02,84,365,4	duplicate(Dimensius#0)	Dimensius#5	10308
 //moc_fild04,207,331,4	duplicate(Dimensius#0)	Dimensius#6	10308
-moc_fild19,106,97,4	duplicate(Dimensius#0)	Dimensius#7	10308
-moc_ruins,64,166,4	duplicate(Dimensius#0)	Dimensius#8	10308
+//moc_fild19,106,97,4	duplicate(Dimensius#0)	Dimensius#7	10308
+//moc_ruins,64,166,4	duplicate(Dimensius#0)	Dimensius#8	10308
 niflheim,197,192,3	duplicate(Dimensius#0)	Dimensius#9	10308
-pay_arche,36,134,4	duplicate(Dimensius#0)	Dimensius#10	10308
-prt_fild05,273,215,4	duplicate(Dimensius#0)	Dimensius#11	10308
-tur_dun01,151,238,4	duplicate(Dimensius#0)	Dimensius#12	10308
-valkyrie,48,35,8	duplicate(Dimensius#0)	Dimensius#13	10308
-yuno_fild03,37,135,4	duplicate(Dimensius#0)	Dimensius#14	10308
+//pay_arche,36,134,4	duplicate(Dimensius#0)	Dimensius#10	10308
+//prt_fild05,273,215,4	duplicate(Dimensius#0)	Dimensius#11	10308
+//tur_dun01,151,238,4	duplicate(Dimensius#0)	Dimensius#12	10308
+//valkyrie,48,35,8	duplicate(Dimensius#0)	Dimensius#13	10308
+//yuno_fild03,37,135,4	duplicate(Dimensius#0)	Dimensius#14	10308
 
 alberta,32,240,4	script	Dimensius#15	10308,{ callfunc "QWS_Town_Warpra",1,"Alberta Town"; close; }
 aldebaran,146,118,4	script	Dimensius#16	10308,{ callfunc "QWS_Town_Warpra",2,"Aldebaran Town"; close; }
@@ -1726,56 +1726,57 @@ izlude,132,121,4	script	Dimensius#26	10308,{ callfunc "QWS_Town_Warpra",11,"Izlu
 lighthalzen,162,103,5	script	Dimensius#27	10308,{ callfunc "QWS_Town_Warpra",13,"Lighthalzen Town"; close; }
 louyang,211,106,4	script	Dimensius#28	10308,{ callfunc "QWS_Town_Warpra",14,"Luoyang Town"; close; }
 morocc,154,99,4	script	Dimensius#29	10308,{ callfunc "QWS_Town_Warpra",16,"Morocc Town"; close; }
-nif_fild01,319,77,1	script	Dimensius#30	10308,{ callfunc "QWS_Town_Warpra",17,"Niflheim Town"; close; }
+nif_fild01,345,328,1	script	Dimensius#30	10308,{ callfunc "QWS_Town_Warpra",17,"Niflheim Town"; close; }
 payon,178,105,4	script	Dimensius#31	10308,{ callfunc "QWS_Town_Warpra",18,"Payon Town"; close; }
 prontera,160,191,5	script	Dimensius#32	10308,{ callfunc "QWS_Town_Warpra",0,"Prontera Town"; close; }
 umbala,133,130,4	script	Dimensius#33	10308,{ callfunc "QWS_Town_Warpra",19,"Umbala Town"; close; }
 xmas,150,134,4	script	Dimensius#34	10308,{ callfunc "QWS_Town_Warpra",15,"Lutie Town"; close; }
 yuno,150,188,4	script	Dimensius#35	10308,{ callfunc "QWS_Town_Warpra",20,"Juno Town"; close; }
-brasilis,199,223,4	script	Dimensius#36	10308,{ callfunc "QWS_Town_Warpra",21,"Brasilis Town"; close; }
-dicastes01,194,194,6	script	Dimensius#37	10308,{ callfunc "QWS_Town_Warpra",22,"El Dicastes Town"; close; }
-manuk,262,177,4	script	Dimensius#38	10308,{ callfunc "QWS_Town_Warpra",23,"Manuk Town"; close; }
-mora,110,100,4	script	Dimensius#39	10308,{ callfunc "QWS_Town_Warpra",24,"Mora Town"; close; }
+//brasilis,199,223,4	script	Dimensius#36	10308,{ callfunc "QWS_Town_Warpra",21,"Brasilis Town"; close; }
+//dicastes01,194,194,6	script	Dimensius#37	10308,{ callfunc "QWS_Town_Warpra",22,"El Dicastes Town"; close; }
+//manuk,262,177,4	script	Dimensius#38	10308,{ callfunc "QWS_Town_Warpra",23,"Manuk Town"; close; }
+//mora,110,100,4	script	Dimensius#39	10308,{ callfunc "QWS_Town_Warpra",24,"Mora Town"; close; }
 moscovia,216,196,6	script	Dimensius#40	10308,{ callfunc "QWS_Town_Warpra",25,"Moscovia Town"; close; }
 rachel,112,141,4	script	Dimensius#41	10308,{ callfunc "QWS_Town_Warpra",26,"Rachel Town"; close; }
-splendide,205,153,4	script	Dimensius#42	10308,{ callfunc "QWS_Town_Warpra",27,"Splendide Town"; close; }
+//splendide,205,153,4	script	Dimensius#42	10308,{ callfunc "QWS_Town_Warpra",27,"Splendide Town"; close; }
 veins,214,123,4	script	Dimensius#43	10308,{ callfunc "QWS_Town_Warpra",28,"Veins Town"; close; }
-dewata,194,178,6	script	Dimensius#44	10308,{ callfunc "QWS_Town_Warpra",29,"Dewata Town"; close; }
-eclage,107,37,4	script	Dimensius#45	10308,{ callfunc "QWS_Town_Warpra",30,"Eclage Town"; close; }
+//dewata,194,178,6	script	Dimensius#44	10308,{ callfunc "QWS_Town_Warpra",29,"Dewata Town"; close; }
+//eclage,107,37,4	script	Dimensius#45	10308,{ callfunc "QWS_Town_Warpra",30,"Eclage Town"; close; }
 mid_camp,208,242,4	script	Dimensius#46	10308,{ callfunc "QWS_Town_Warpra",31,"Midgard Expedition"; close; }
 sec_in02,146,173,5	script	Dimensius#47	10308,{ callfunc "QWS_Town_Warpra",0,"Prontera Town"; close; }
+moc_para01,30,182,5	script	Dimensius#48	10308,{ callfunc "QWS_Town_Warpra",0,"Prontera Town"; close; }
 
-abyss_02,274,266,1	script	Dimensius#46	10308,{ callfunc "QWS_Dungeon_Warpra",0,"Abyss Lake"; close; }
-ama_dun02,192,118,5	script	Dimensius#47	10308,{ callfunc "QWS_Dungeon_Warpra",1,"Amatsu Dungeon"; close; }
-anthell02,170,165,3	script	Dimensius#48	10308,{ callfunc "QWS_Dungeon_Warpra",2,"Ant Hell Dungeon"; close; }
-ayo_dun02,258,193,5	script	Dimensius#49	10308,{ callfunc "QWS_Dungeon_Warpra",3,"Ayothaya Dungeon"; close; }
-ein_dun02,292,282,1	script	Dimensius#50	10308,{ callfunc "QWS_Dungeon_Warpra",8,"Einbech Dungeon"; close; }
-iz_dun03,202,47,2	script	Dimensius#51	10308,{ callfunc "QWS_Dungeon_Warpra",4,"Byalan Dungeon"; close; }
-c_tower3,129,106,4	script	Dimensius#52	10308,{ callfunc "QWS_Dungeon_Warpra",5,"Clock Tower Dungeon"; close; }
-mjo_dun02,39,25,4	script	Dimensius#53	10308,{ callfunc "QWS_Dungeon_Warpra",6,"Coal Mine Dungeon"; close; }
-prt_sewb2,176,30,3	script	Dimensius#54	10308,{ callfunc "QWS_Dungeon_Warpra",7,"Culvert Dungeon"; close; }
-gefenia03,137,34,0	script	Dimensius#55	10308,{ callfunc "QWS_Dungeon_Warpra",9,"Gefenia Dungeon"; close; }
-gef_dun02,218,61,2	script	Dimensius#56	10308,{ callfunc "QWS_Dungeon_Warpra",10,"Gefen Dungeon"; close; }
-glast_01,371,308,3	script	Dimensius#57	10308,{ callfunc "QWS_Dungeon_Warpra",11,"Glast Heim Dungeon"; close; }
-gon_dun01,167,273,4	script	Dimensius#58	10308,{ callfunc "QWS_Dungeon_Warpra",12,"Kunlun Dungeon"; close; }
-juperos_02,127,154,5	script	Dimensius#59	10308,{ callfunc "QWS_Dungeon_Warpra",14,"Juperos Cave"; close; }
-kh_dun01,14,224,3	script	Dimensius#60	10308,{ callfunc "QWS_Dungeon_Warpra",28,"Kiel Dungeon"; close; }
-lhz_dun02,156,151,5	script	Dimensius#61	10308,{ callfunc "QWS_Dungeon_Warpra",15,"Lighthalzen Bio Lab"; close; }
-lou_dun02,168,264,4	script	Dimensius#62	10308,{ callfunc "QWS_Dungeon_Warpra",16,"Luoyang Dungeon"; close; }
-mag_dun02,46,41,3	script	Dimensius#63	10308,{ callfunc "QWS_Dungeon_Warpra",17,"Magma Dungeon"; close; }
-odin_tem01,115,148,3	script	Dimensius#64	10308,{ callfunc "QWS_Dungeon_Warpra",18,"Odin Temple"; close; }
-orcsdun01,185,11,3	script	Dimensius#65	10308,{ callfunc "QWS_Dungeon_Warpra",19,"Orc Dungeon"; close; }
-pay_dun03,162,143,3	script	Dimensius#66	10308,{ callfunc "QWS_Dungeon_Warpra",20,"Payon Dungeon"; close; }
-moc_pryd02,101,95,3	script	Dimensius#67	10308,{ callfunc "QWS_Dungeon_Warpra",21,"Pyramides Dungeon"; close; }
-in_sphinx2,274,268,1	script	Dimensius#68	10308,{ callfunc "QWS_Dungeon_Warpra",22,"Sphinx Dungeon"; close; }
+//abyss_02,274,266,1	script	Dimensius#46	10308,{ callfunc "QWS_Dungeon_Warpra",0,"Abyss Lake"; close; }
+//ama_dun02,192,118,5	script	Dimensius#47	10308,{ callfunc "QWS_Dungeon_Warpra",1,"Amatsu Dungeon"; close; }
+//anthell02,170,165,3	script	Dimensius#48	10308,{ callfunc "QWS_Dungeon_Warpra",2,"Ant Hell Dungeon"; close; }
+//ayo_dun02,258,193,5	script	Dimensius#49	10308,{ callfunc "QWS_Dungeon_Warpra",3,"Ayothaya Dungeon"; close; }
+//ein_dun02,292,282,1	script	Dimensius#50	10308,{ callfunc "QWS_Dungeon_Warpra",8,"Einbech Dungeon"; close; }
+//iz_dun03,202,47,2	script	Dimensius#51	10308,{ callfunc "QWS_Dungeon_Warpra",4,"Byalan Dungeon"; close; }
+//c_tower3,129,106,4	script	Dimensius#52	10308,{ callfunc "QWS_Dungeon_Warpra",5,"Clock Tower Dungeon"; close; }
+//mjo_dun02,39,25,4	script	Dimensius#53	10308,{ callfunc "QWS_Dungeon_Warpra",6,"Coal Mine Dungeon"; close; }
+//prt_sewb2,176,30,3	script	Dimensius#54	10308,{ callfunc "QWS_Dungeon_Warpra",7,"Culvert Dungeon"; close; }
+//gefenia03,137,34,0	script	Dimensius#55	10308,{ callfunc "QWS_Dungeon_Warpra",9,"Gefenia Dungeon"; close; }
+//gef_dun02,218,61,2	script	Dimensius#56	10308,{ callfunc "QWS_Dungeon_Warpra",10,"Gefen Dungeon"; close; }
+//glast_01,371,308,3	script	Dimensius#57	10308,{ callfunc "QWS_Dungeon_Warpra",11,"Glast Heim Dungeon"; close; }
+//gon_dun01,167,273,4	script	Dimensius#58	10308,{ callfunc "QWS_Dungeon_Warpra",12,"Kunlun Dungeon"; close; }
+//juperos_02,127,154,5	script	Dimensius#59	10308,{ callfunc "QWS_Dungeon_Warpra",14,"Juperos Cave"; close; }
+//kh_dun01,14,224,3	script	Dimensius#60	10308,{ callfunc "QWS_Dungeon_Warpra",28,"Kiel Dungeon"; close; }
+//lhz_dun02,156,151,5	script	Dimensius#61	10308,{ callfunc "QWS_Dungeon_Warpra",15,"Lighthalzen Bio Lab"; close; }
+//lou_dun02,168,264,4	script	Dimensius#62	10308,{ callfunc "QWS_Dungeon_Warpra",16,"Luoyang Dungeon"; close; }
+//mag_dun02,46,41,3	script	Dimensius#63	10308,{ callfunc "QWS_Dungeon_Warpra",17,"Magma Dungeon"; close; }
+//odin_tem01,115,148,3	script	Dimensius#64	10308,{ callfunc "QWS_Dungeon_Warpra",18,"Odin Temple"; close; }
+//orcsdun01,185,11,3	script	Dimensius#65	10308,{ callfunc "QWS_Dungeon_Warpra",19,"Orc Dungeon"; close; }
+//pay_dun03,162,143,3	script	Dimensius#66	10308,{ callfunc "QWS_Dungeon_Warpra",20,"Payon Dungeon"; close; }
+//moc_pryd02,101,95,3	script	Dimensius#67	10308,{ callfunc "QWS_Dungeon_Warpra",21,"Pyramides Dungeon"; close; }
+//in_sphinx2,274,268,1	script	Dimensius#68	10308,{ callfunc "QWS_Dungeon_Warpra",22,"Sphinx Dungeon"; close; }
 tha_t07,111,162,3	script	Dimensius#269	10308,{ callfunc "QWS_Dungeon_Warpra",24,"Thanatos Tower"; close; }
-treasure02,104,40,3	script	Dimensius#70	10308,{ callfunc "QWS_Dungeon_Warpra",23,"Sunken Ship Dungeon"; close; }
-xmas_dun02,124,131,3	script	Dimensius#71	10308,{ callfunc "QWS_Dungeon_Warpra",25,"Toy Factory Dungeon"; close; }
-um_dun02,44,28,3	script	Dimensius#72	10308,{ callfunc "QWS_Dungeon_Warpra",27,"Umbala Dungeon"; close; }
-tur_dun02,162,23,3	script	Dimensius#73	10308,{ callfunc "QWS_Dungeon_Warpra",26,"Turtle Island Dungeon"; close; }
-prt_maze02,102,69,4	script	Dimensius#74	10308,{ callfunc "QWS_Dungeon_Warpra",13,"Hidden Dungeon"; close; }
+//treasure02,104,40,3	script	Dimensius#70	10308,{ callfunc "QWS_Dungeon_Warpra",23,"Sunken Ship Dungeon"; close; }
+//xmas_dun02,124,131,3	script	Dimensius#71	10308,{ callfunc "QWS_Dungeon_Warpra",25,"Toy Factory Dungeon"; close; }
+//um_dun02,44,28,3	script	Dimensius#72	10308,{ callfunc "QWS_Dungeon_Warpra",27,"Umbala Dungeon"; close; }
+//tur_dun02,162,23,3	script	Dimensius#73	10308,{ callfunc "QWS_Dungeon_Warpra",26,"Turtle Island Dungeon"; close; }
+//prt_maze02,102,69,4	script	Dimensius#74	10308,{ callfunc "QWS_Dungeon_Warpra",13,"Hidden Dungeon"; close; }
 lhz_dun04,241,56,4	script	Dimensius#75	10308,{ callfunc "QWS_Dungeon_Warpra",28,"Hidden Dungeon"; close; }
-mosk_dun03,220,225,4	script	Dimensius#76	10308,{ callfunc "QWS_Dungeon_Warpra",29,"Hidden Dungeon"; close; }
-ra_san05,157,157,4	script	Dimensius#77	10308,{ callfunc "QWS_Dungeon_Warpra",30,"Hidden Dungeon"; close; }
-abbey03,114,4,4	script	Dimensius#78	10308,{ callfunc "QWS_Dungeon_Warpra",31,"Hidden Dungeon"; close; }
-gefenia01,61,165,4	script	Dimensius#79	10308,{ callfunc "QWS_Dungeon_Warpra",32,"Hidden Dungeon"; close; }
+//mosk_dun03,220,225,4	script	Dimensius#76	10308,{ callfunc "QWS_Dungeon_Warpra",29,"Hidden Dungeon"; close; }
+ra_san01,136,144,4	script	Dimensius#77	10308,{ callfunc "QWS_Dungeon_Warpra",30,"Hidden Dungeon"; close; }
+abbey01,47,10,4	script	Dimensius#78	10308,{ callfunc "QWS_Dungeon_Warpra",31,"Hidden Dungeon"; close; }
+//gefenia01,61,165,4	script	Dimensius#79	10308,{ callfunc "QWS_Dungeon_Warpra",32,"Hidden Dungeon"; close; }

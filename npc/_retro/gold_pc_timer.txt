@@ -6,7 +6,7 @@
 //= Customized to show reward item and amount in the menu
 //============================================================
 
-prt_in,45,117,5	script	Goldpoint Manager::GOLDPCCAFE	4_TREASURE_BOX,{
+moc_para01,18,187,5	script	Goldpoint Manager::GOLDPCCAFE	4_TREASURE_BOX,{
 
 	// Format: "ITEM_ID:AMOUNT:COST_IN_POINTS"
 	setarray .items$[1],

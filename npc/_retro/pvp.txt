@@ -1,0 +1,127 @@
+//===== PvP Room NPC =========================================
+
+prontera,151,185,5	script	PvP Room	4_M_KY_KIYOM,{
+
+//================ MENU =================
+
+OnTouch:
+
+	.@Menu = select(
+		"Enter PvP Room:View PvP Ladder:Personal Stats"
+	);
+
+	switch(.@Menu){
+
+	//================ ENTER =================
+	case 1:
+		if(getmapusers(.MapName$) >= .MaxPlayers){
+			mes "The PvP room is full.";
+			close;
+		}
+		announce "[PvP] "+strcharinfo(0)+" entered PvP Room", bc_map;
+		warp .MapName$,0,0;
+		end;
+
+	//================ LADDER =================
+	case 2:
+		query_sql("SELECT `char_reg_num`.`value`,`char`.`name` FROM `char` INNER JOIN `char_reg_num` ON `char_reg_num`.`char_id`=`char`.`char_id` WHERE `char_reg_num`.`key`='pl_pkcount' ORDER BY `char_reg_num`.`value` DESC LIMIT 10",.@value,.@name$);
+
+		mes "[PvP Ladder]";
+		if (!getarraysize(.@name$)){
+			mes "No rankings yet.";
+		} else {
+			for(.@i = 0; .@i < getarraysize(.@name$); .@i++){
+				mes "#"+(.@i+1)+" "+.@name$[.@i]+" - "+.@value[.@i]+" kills";
+			}
+		}
+		close;
+
+	//================ STATS =================
+	case 3:
+		mes "[PvP]";
+		mes "Kills: "+pl_pkcount;
+		mes "Deaths: "+pl_dthcount;
+		close;
+	}
+
+	end;
+
+//================ KILL SYSTEM =================
+
+OnPCKillEvent:
+
+	.@killer_id = killerrid;
+	.@victim_id = killedrid;
+
+	.@killer_ip$ = getcharip(.@killer_id);
+	.@victim_ip$ = getcharip(.@victim_id);
+
+	// Ajuste HWID conforme seu sistema
+	.@killer_hwid$ = getcharid(3);
+	.@victim_hwid$ = getcharid(3);
+
+	//================ ANNOUNCE =================
+	announce "[PvP] "+strcharinfo(0)+" killed "+rid2name(.@victim_id)+"!", bc_all;
+
+	//================ SAME IP =================
+	if (.@killer_ip$ == .@victim_ip$) {
+		dispbottom "[PvP] No reward (same IP detected).";
+		end;
+	}
+
+	//================ SAME HWID =================
+	if (.@killer_hwid$ == .@victim_hwid$) {
+		dispbottom "[PvP] No reward (same HWID detected).";
+		end;
+	}
+
+	//================ LAST KILL (300s) =================
+	if (gettimetick(2) < #LastKillTime + 300 && #LastKilledRID == .@victim_id) {
+		dispbottom "[PvP] No reward (same target within 5 minutes).";
+		end;
+	}
+
+	//================ SAVE LAST KILL =================
+	#LastKilledRID = .@victim_id;
+	#LastKillTime = gettimetick(2);
+
+	//================ REWARD =================
+	pl_pkcount++;
+	getitem 7828, 1;
+
+	//================ VICTIM =================
+	attachrid(.@victim_id);
+	pl_dthcount++;
+
+	end;
+
+//================ SHOP MENU =================
+S_ShopMenu:
+	callshop "Shop",1; end;
+	end;
+
+//================ INIT =================
+
+OnInit:
+
+	.MapName$ = "pvp_n_1-5";
+	.MaxPlayers = 50;
+
+	setmapflag .MapName$, MF_PVP;
+	setmapflag .MapName$, MF_PVP_NOGUILD;
+
+
+	while(1) {
+		.@count = getmapusers(.MapName$);
+        DelWaitingRoom;
+
+        WaitingRoom("PvP Arena [" + .@count + "/" + .MaxPlayers + "]", 0);
+        sleep 1000;
+    }
+
+	end;
+}
+
+//================ SHOP =================
+-	pointshop	Shop	-1,#PvpPoints,7828:1
+

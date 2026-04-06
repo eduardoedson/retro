@@ -2,7 +2,7 @@
 //= Reset NPC (First Reset Free)
 //============================================================
 
-prt_in,45,94,3	script	Reset Girl	4_F_YUNYANG,{
+moc_para01,15,161,3	script	Reset Girl	4_F_YUNYANG,{
 
 	// Costs: Skills, Stats, Both, Limit (0 = unlimited)
 	setarray .@Reset[0], 100000, 100000, 150000, 0;

@@ -8,10 +8,10 @@ Header:
 
 Body:
   - Name: Jimmy
-    Map: lhz_dun04
-    X: 145
-    Y: 276
-    Direction: East
+    Map: moc_para01
+    X: 16
+    Y: 179
+    Direction: West
     Sprite: 4_M_HEINRICH
     Items:
       - Index: 0
@@ -21,7 +21,7 @@ Body:
         RequiredItems:
           - Index: 0
             Item: Particles_Of_Energy4
-            Amount: 450
+            Amount: 250
       - Index: 1
         Item: Enriched_Elunium
         Stock: 0
@@ -29,7 +29,7 @@ Body:
         RequiredItems:
           - Index: 0
             Item: Particles_Of_Energy4
-            Amount: 450
+            Amount: 200
       - Index: 2
         Item: Blacksmith_Blessing
         Stock: 0
@@ -37,4 +37,4 @@ Body:
         RequiredItems:
           - Index: 0
             Item: Blood_Thirst
-            Amount: 999
+            Amount: 400

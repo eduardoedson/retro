@@ -1,0 +1,780 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: Roki
+    Map: moc_para01
+    X: 48
+    Y: 184
+    Direction: West
+    Sprite: 4_WHITEKNIGHT
+    Items:
+      - Index: 0
+        Item: Mre_A
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 5
+      - Index: 1
+        Item: Mre_B
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 10
+      - Index: 2
+        Item: Mre_C
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 10
+      - Index: 3
+        Item: Tasty_Colonel
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 10
+      - Index: 4
+        Item: Tasty_Major
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 10
+      - Index: 5
+        Item: Commander_Manteau
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 50
+      - Index: 6
+        Item: Commander_Manteau_
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 50
+      - Index: 7
+        Item: Sheriff_Manteau
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 50
+      - Index: 8
+        Item: Battle_Greave
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 50
+      - Index: 9
+        Item: Combat_Boots
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 50
+      - Index: 10
+        Item: Battle_Boots
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 50
+      - Index: 11
+        Item: Assaulter_Plate
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 80
+      - Index: 12
+        Item: Elite_Engineer_Armor
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 80
+      - Index: 13
+        Item: Assassin_Robe
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 80
+      - Index: 14
+        Item: Warlock_Battle_Robe
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 80
+      - Index: 15
+        Item: Medic_Robe
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 80
+      - Index: 16
+        Item: Elite_Shooter_Suit
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 80
+      - Index: 17
+        Item: Medal_Gunner
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 500
+      - Index: 18
+        Item: Medal_Swordman
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 500
+      - Index: 19
+        Item: Medal_Thief
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 500
+      - Index: 20
+        Item: Medal_Acolyte
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 500
+      - Index: 21
+        Item: Medal_Mage
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 500
+      - Index: 22
+        Item: Medal_Archer
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 500
+      - Index: 23
+        Item: Medal_Merchant
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 500
+      - Index: 24
+        Item: BF_Dagger1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 25
+        Item: BF_Sword2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 26
+        Item: BF_Spear1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 27
+        Item: BF_Staff1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 28
+        Item: BF_Staff3
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 29
+        Item: BF_Morning_Star2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 30
+        Item: BF_Instrument2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 31
+        Item: BF_Whip2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 32
+        Item: BF_Book1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 33
+        Item: BF_Knuckle2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 34
+        Item: BF_Two_Handed_Sword1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 35
+        Item: BF_Two_Handed_Axe2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 36
+        Item: BF_Huuma_Shuriken1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 37
+        Item: BF_Katar1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 38
+        Item: BF_Bow2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 39
+        Item: BF_Pistol1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 40
+        Item: BF_Gatling_Gun1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 41
+        Item: BF_Dagger2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 42
+        Item: BF_Sword1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 43
+        Item: BF_Staff2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 44
+        Item: BF_Staff4
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 45
+        Item: BF_Morning_Star1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 46
+        Item: BF_Instrument1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 47
+        Item: BF_Whip1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 48
+        Item: BF_Book2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 49
+        Item: BF_Knuckle1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 50
+        Item: BF_Two_Handed_Sword2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 51
+        Item: BF_Lance1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 52
+        Item: BF_Two_Handed_Axe1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 53
+        Item: BF_Huuma_Shuriken2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 54
+        Item: BF_Katar2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 55
+        Item: BF_Rifle1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 56
+        Item: BF_Shotgun1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 57
+        Item: BF_Launcher1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
+      - Index: 58
+        Item: Krieger_Suit1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 840
+      - Index: 59
+        Item: Krieger_Suit2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 120
+      - Index: 60
+        Item: Krieger_Suit3
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 15
+      - Index: 61
+        Item: Krieger_Muffler1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 630
+      - Index: 62
+        Item: Krieger_Shoes1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 580
+      - Index: 63
+        Item: Krieger_Shoes2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 70
+      - Index: 64
+        Item: Krieger_Shoes3
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 10
+      - Index: 65
+        Item: Krieger_Ring1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 1200
+      - Index: 66
+        Item: Krieger_Ring2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 200
+      - Index: 67
+        Item: Krieger_Ring3
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 30
+      - Index: 68
+        Item: Krieger_Dagger1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 69
+        Item: Krieger_Onehand_Sword1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 70
+        Item: Krieger_Onehand_Sword2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 71
+        Item: Krieger_Onehand_Sword3
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 72
+        Item: Krieger_Twohand_Sword1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 73
+        Item: Krieger_Onehand_Spear1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 74
+        Item: Krieger_Twohand_Spear1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 76
+        Item: Krieger_Onehand_Axe1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 77
+        Item: Krieger_Twohand_Axe1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 78
+        Item: Krieger_Onehand_Mace1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 79
+        Item: Krieger_Katar1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 80
+        Item: Krieger_Katar2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 81
+        Item: Krieger_Book1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 81
+        Item: Krieger_Book2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 83
+        Item: Krieger_Bow1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 84
+        Item: Krieger_Knuckle1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 85
+        Item: Krieger_Knuckle2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 86
+        Item: Krieger_Onehand_Staff1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 87
+        Item: Krieger_Onehand_Staff2
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 88
+        Item: Krieger_Twohand_Staff1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 89
+        Item: Krieger_Instrument1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 90
+        Item: Krieger_Whip1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 91
+        Item: Krieger_Pistol1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 92
+        Item: Krieger_Rifle1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 93
+        Item: Krieger_Gatling1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 94
+        Item: Krieger_Shotgun1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 95
+        Item: Krieger_Launcher1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000
+      - Index: 96
+        Item: Krieger_Huuma_Shuriken1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 2000

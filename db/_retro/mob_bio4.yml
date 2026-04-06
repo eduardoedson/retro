@@ -1,0 +1,1076 @@
+Header:
+  Type: MOB_DB
+  Version: 5
+
+Body:
+  - Id: 2221
+    AegisName: RANDEL
+    Name: Randel
+    Level: 90
+    Hp: 239372
+    BaseExp: 100000
+    JobExp: 85000
+    Attack: 3055
+    Attack2: 1230
+    Defense: 9
+    MagicDefense: 5
+    Str: 58
+    Agi: 74
+    Vit: 23
+    Int: 50
+    Dex: 85
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 19
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 2000
+      - Item: Goast_Chill
+        Rate: 1
+      - Item: Particles_Of_Energy4
+        Rate: 1000
+      - Item: Elunium
+        Rate: 100
+#      - Item: Cannon_Spear
+#        Rate: 10
+#      - Item: Bible_Of_Promise2
+#        Rate: 10
+      - Item: Blood_Thirst
+        Rate: 150
+#      - Item: Randel_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2222
+    AegisName: FLAMEL
+    Name: Flamel
+    Level: 90
+    Hp: 158234
+    BaseExp: 100000
+    JobExp: 85000
+    Attack: 2017
+    Attack2: 1602
+    Defense: 8
+    MagicDefense: 2
+    Str: 41
+    Agi: 78
+    Vit: 70
+    Int: 81
+    Dex: 47
+    Luk: 51
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 1152
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 19
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 2000
+      - Item: Goast_Chill
+        Rate: 1
+      - Item: Particles_Of_Energy4
+        Rate: 1000
+      - Item: Oridecon
+        Rate: 100
+#      - Item: Green_Operation_Coat
+#        Rate: 10
+#      - Item: Red_Ether_Bag
+#        Rate: 1
+      - Item: Blood_Thirst
+        Rate: 150
+#      - Item: Flamel_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2223
+    AegisName: CELIA
+    Name: Celia
+    Level: 90
+    Hp: 126572
+    BaseExp: 100000
+    JobExp: 85000
+    Attack: 1612
+    Attack2: 2450
+    Defense: 7
+    MagicDefense: 9
+    Str: 36
+    Agi: 99
+    Vit: 61
+    Int: 21
+    Dex: 85
+    Luk: 49
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 1152
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 19
+    Drops:
+      - Item: Armlet_Of_Prisoner
+        Rate: 2000
+      - Item: Goast_Chill
+        Rate: 1
+#      - Item: Telekinetic_Orb
+#        Rate: 20
+      - Item: Particles_Of_Energy4
+        Rate: 1000
+#      - Item: Creeper_Bow
+#        Rate: 10
+#      - Item: Mental_Stick
+#        Rate: 1
+      - Item: Blood_Thirst
+        Rate: 150
+#      - Item: Ceila_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2224
+    AegisName: CHEN
+    Name: Chen
+    Level: 90
+    Hp: 139781
+    Sp: 25
+    BaseExp: 100000
+    JobExp: 85000
+    Attack: 2501
+    Attack2: 1248
+    Defense: 9
+    MagicDefense: 6
+    Str: 22
+    Agi: 81
+    Vit: 83
+    Int: 30
+    Dex: 21
+    Luk: 61
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    RaceGroups:
+      Biolab: true
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 768
+    ClientAttackMotion: 576
+    DamageMotion: 288
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Goast_Chill
+        Rate: 1
+#      - Item: Lab_Staff_Record
+#        Rate: 2000
+      - Item: Particles_Of_Energy4
+        Rate: 1000
+      - Item: Oridecon
+        Rate: 100
+#      - Item: Sura_Rampage
+#        Rate: 10
+#      - Item: Berserk
+#        Rate: 5
+      - Item: Blood_Thirst
+        Rate: 150
+#      - Item: Chen_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2225
+    AegisName: GERTIE
+    Name: Gertie
+    Level: 90
+    Hp: 133463
+    BaseExp: 100000
+    JobExp: 85000
+    Attack: 3684
+    Attack2: 1207
+    Defense: 8
+    MagicDefense: 1
+    Str: 80
+    Agi: 25
+    Vit: 55
+    Int: 51
+    Dex: 21
+    Luk: 45
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    RaceGroups:
+      Biolab: true
+    Element: Poison
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 20
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Goast_Chill
+        Rate: 1
+#      - Item: Lab_Staff_Record
+#        Rate: 2000
+      - Item: Particles_Of_Energy4
+        Rate: 1000
+      - Item: Elunium
+        Rate: 100
+#      - Item: Catapult
+#        Rate: 10
+#      - Item: Black_Wing
+#        Rate: 10
+      - Item: Blood_Thirst
+        Rate: 150
+#      - Item: Gertie_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2226
+    AegisName: ALPHOCCIO
+    Name: Alphoccio
+    Level: 90
+    Hp: 128101
+    BaseExp: 100000
+    JobExp: 85000
+    Attack: 1273
+    Attack2: 3076
+    Defense: 8
+    MagicDefense: 5
+    Str: 20
+    Agi: 97
+    Vit: 71
+    Int: 81
+    Dex: 81
+    Luk: 81
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 19
+    Drops:
+      - Item: Goast_Chill
+        Rate: 1
+#      - Item: Lab_Staff_Record
+#        Rate: 2000
+      - Item: Particles_Of_Energy4
+        Rate: 1000
+      - Item: Oridecon
+        Rate: 100
+#      - Item: Geffenia_Book_Water
+#        Rate: 10
+#      - Item: Green_Whistle
+#        Rate: 10
+      - Item: Blood_Thirst
+        Rate: 150
+#      - Item: Alphoccio_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2227
+    AegisName: TRENTINI
+    Name: Trentini
+    Level: 90
+    Hp: 102481
+    BaseExp: 100000
+    JobExp: 85000
+    Attack: 1070
+    Attack2: 3206
+    Defense: 7
+    MagicDefense: 2
+    Str: 15
+    Agi: 81
+    Vit: 65
+    Int: 94
+    Dex: 95
+    Luk: 76
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 19
+    Drops:
+      - Item: Goast_Chill
+        Rate: 1
+#      - Item: Lab_Staff_Record
+#        Rate: 2000
+#      - Item: Dance_Shoes
+#        Rate: 20
+      - Item: Particles_Of_Energy4
+        Rate: 1000
+#      - Item: Assassin_Handcuffs
+#        Rate: 10
+#      - Item: Stem_Whip
+#        Rate: 10
+      - Item: Blood_Thirst
+        Rate: 150
+#      - Item: Trentini_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2228
+    AegisName: G_RANDEL
+    Name: Paladin Randel
+    Level: 90
+    Hp: 3163000
+    Attack: 5537
+    Attack2: 3017
+    Defense: 9
+    MagicDefense: 9
+    Str: 91
+    Agi: 55
+    Vit: 21
+    Int: 11
+    Dex: 65
+    Luk: 66
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+      Bio5_Swordman_Thief: true
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      FixedItemDrop: true
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 10
+#      - Item: Bradium
+#        Rate: 100
+  - Id: 2229
+    AegisName: G_FLAMEL
+    Name: Creator Flamel
+    Level: 99
+    Hp: 2531750
+    Attack: 2355
+    Attack2: 2514
+    Defense: 9
+    MagicDefense: 9
+    Str: 59
+    Agi: 75
+    Vit: 57
+    Int: 70
+    Dex: 37
+    Luk: 71
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+      Bio5_Acolyte_Merchant: true
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1152
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      FixedItemDrop: true
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 10
+#      - Item: Carnium
+#        Rate: 100
+  - Id: 2230
+    AegisName: G_CELIA
+    Name: Professor Celia
+    Level: 99
+    Hp: 2025160
+    Attack: 2481
+    Attack2: 3114
+    Defense: 9
+    MagicDefense: 9
+    Str: 65
+    Agi: 48
+    Vit: 71
+    Int: 55
+    Dex: 67
+    Luk: 85
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+      Bio5_Mage_Archer: true
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 1152
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      FixedItemDrop: true
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 10
+#      - Item: Bradium
+#        Rate: 100
+  - Id: 2231
+    AegisName: G_CHEN
+    Name: Champion Chen
+    Level: 99
+    Hp: 2236500
+    Sp: 1553
+    Attack: 3617
+    Attack2: 1947
+    Defense: 9
+    MagicDefense: 9
+    Str: 80
+    Agi: 65
+    Vit: 65
+    Int: 50
+    Dex: 98
+    Luk: 66
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+      Bio5_Acolyte_Merchant: true
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 76
+    AttackMotion: 768
+    ClientAttackMotion: 576
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      FixedItemDrop: true
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 10
+#      - Item: Carnium
+#        Rate: 100
+  - Id: 2232
+    AegisName: G_GERTIE
+    Name: Stalker Gertie
+    Level: 99
+    Hp: 2135410
+    Attack: 6162
+    Attack2: 1274
+    Defense: 9
+    MagicDefense: 9
+    Str: 27
+    Agi: 35
+    Vit: 27
+    Int: 51
+    Dex: 33
+    Luk: 61
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    RaceGroups:
+      Biolab: true
+      Bio5_Swordman_Thief: true
+    Element: Poison
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      FixedItemDrop: true
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 10
+#      - Item: Bradium
+#        Rate: 100
+  - Id: 2233
+    AegisName: G_ALPHOCCIO
+    Name: Clown Alphoccio
+    Level: 99
+    Hp: 2049620
+    Attack: 2641
+    Attack2: 3749
+    Defense: 9
+    MagicDefense: 9
+    Str: 19
+    Agi: 61
+    Vit: 30
+    Int: 71
+    Dex: 70
+    Luk: 99
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+      Bio5_Mage_Archer: true
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      FixedItemDrop: true
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 10
+#      - Item: Carnium
+#        Rate: 100
+  - Id: 2234
+    AegisName: G_TRENTINI
+    Name: Gypsy Trentini
+    Level: 99
+    Hp: 2049620
+    Attack: 2016
+    Attack2: 4036
+    Defense: 9
+    MagicDefense: 9
+    Str: 67
+    Agi: 47
+    Vit: 65
+    Int: 17
+    Dex: 33
+    Luk: 61
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+      Bio5_Mage_Archer: true
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      FixedItemDrop: true
+    Drops:
+      - Item: Old_Violet_Box
+        Rate: 10
+#      - Item: Bradium
+#        Rate: 100
+  - Id: 2235
+    AegisName: B_RANDEL
+    Name: Paladin Randel
+    Level: 99
+    Hp: 6870000
+    BaseExp: 3674489
+    JobExp: 2149566
+    MvpExp: 1837244
+    Attack: 5537
+    Attack2: 3017
+    Defense: 9
+    MagicDefense: 9
+    Str: 91
+    Agi: 55
+    Vit: 21
+    Int: 11
+    Dex: 65
+    Luk: 66
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Goast_Chill
+        Rate: 5000
+    Drops:
+#      - Item: High_Weapon_Box
+#        Rate: 5000
+#      - Item: Sgrade_Pocket
+#        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 3000
+#      - Item: Bradium
+#        Rate: 2000
+#      - Item: Giant_Shield
+#        Rate: 2000
+#      - Item: Ancient_Dagger
+#        Rate: 2000
+#      - Item: Paladin_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2236
+    AegisName: B_FLAMEL
+    Name: Creator Flamel
+    Level: 99
+    Hp: 4230000
+    BaseExp: 2611785
+    JobExp: 1446694
+    MvpExp: 1305892
+    Attack: 2355
+    Attack2: 2514
+    Defense: 9
+    MagicDefense: 9
+    Str: 59
+    Agi: 75
+    Vit: 57
+    Int: 70
+    Dex: 37
+    Luk: 71
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1152
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Goast_Chill
+        Rate: 5000
+    Drops:
+#      - Item: High_Weapon_Box
+#        Rate: 5000
+#      - Item: Sgrade_Pocket
+#        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 3000
+#      - Item: Carnium
+#        Rate: 2000
+#      - Item: End_Sektura
+#        Rate: 2000
+#      - Item: Ygnus_Stale
+#        Rate: 2000
+#      - Item: Giant_Axe
+#        Rate: 2000
+#      - Item: Creator_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2237
+    AegisName: B_CELIA
+    Name: Professor Celia
+    Level: 99
+    Hp: 3847804
+    BaseExp: 2513654
+    JobExp: 1380385
+    MvpExp: 1256827
+    Attack: 2481
+    Attack2: 3114
+    Defense: 9
+    MagicDefense: 9
+    Str: 65
+    Agi: 48
+    Vit: 71
+    Int: 55
+    Dex: 67
+    Luk: 85
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 1152
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Goast_Chill
+        Rate: 5000
+    Drops:
+#      - Item: High_Weapon_Box
+#        Rate: 5000
+#      - Item: Sgrade_Pocket
+#        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 3000
+#      - Item: Bradium
+#        Rate: 2000
+#      - Item: Alchemy_Glove
+#        Rate: 2000
+#      - Item: Professor_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2238
+    AegisName: B_CHEN
+    Name: Champion Chen
+    Level: 99
+    Hp: 4249350
+    Sp: 1553
+    BaseExp: 2556784
+    JobExp: 1614235
+    MvpExp: 1278392
+    Attack: 3617
+    Attack2: 1947
+    Defense: 9
+    MagicDefense: 9
+    Str: 80
+    Agi: 65
+    Vit: 65
+    Int: 50
+    Dex: 98
+    Luk: 66
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    RaceGroups:
+      Biolab: true
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 76
+    AttackMotion: 768
+    ClientAttackMotion: 576
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Goast_Chill
+        Rate: 5000
+    Drops:
+#      - Item: High_Weapon_Box
+#        Rate: 5000
+#      - Item: Sgrade_Pocket
+#        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 3000
+#      - Item: Carnium
+#        Rate: 2000
+#      - Item: Cakram
+#        Rate: 2000
+#      - Item: Kaiser_Knuckle
+#        Rate: 2000
+#      - Item: Champion_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2239
+    AegisName: B_GERTIE
+    Name: Stalker Gertie
+    Level: 99
+    Hp: 4057279
+    BaseExp: 2210349
+    JobExp: 1480200
+    MvpExp: 1105174
+    Attack: 6162
+    Attack2: 1274
+    Defense: 9
+    MagicDefense: 9
+    Str: 17
+    Agi: 15
+    Vit: 27
+    Int: 51
+    Dex: 33
+    Luk: 61
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    RaceGroups:
+      Biolab: true
+    Element: Poison
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Goast_Chill
+        Rate: 5000
+    Drops:
+#      - Item: High_Weapon_Box
+#        Rate: 5000
+#      - Item: Sgrade_Pocket
+#        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 3000
+#      - Item: Bradium
+#        Rate: 2000
+#      - Item: Scarletto_Nail
+#        Rate: 2000
+#      - Item: Aztoe_Nail
+#        Rate: 2000
+#      - Item: Stalker_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2240
+    AegisName: B_ALPHOCCIO
+    Name: Clown Alphoccio
+    Level: 99
+    Hp: 3894278
+    BaseExp: 2113018
+    JobExp: 1357934
+    MvpExp: 1056509
+    Attack: 2641
+    Attack2: 3749
+    Defense: 9
+    MagicDefense: 9
+    Str: 19
+    Agi: 61
+    Vit: 30
+    Int: 70
+    Dex: 70
+    Luk: 99
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Goast_Chill
+        Rate: 5000
+    Drops:
+#      - Item: High_Weapon_Box
+#        Rate: 5000
+#      - Item: Sgrade_Pocket
+#        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 3000
+#      - Item: Carnium
+#        Rate: 2000
+#      - Item: Mystic_Bow
+#        Rate: 2000
+#      - Item: Clown_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 2241
+    AegisName: B_TRENTINI
+    Name: Gypsy Trentini
+    Level: 99
+    Hp: 3894278
+    BaseExp: 2231879
+    JobExp: 1409702
+    MvpExp: 1115939
+    Attack: 2016
+    Attack2: 4036
+    Defense: 9
+    MagicDefense: 9
+    Str: 67
+    Agi: 47
+    Vit: 65
+    Int: 17
+    Dex: 33
+    Luk: 61
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    RaceGroups:
+      Biolab: true
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 76
+    AttackMotion: 864
+    ClientAttackMotion: 672
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Goast_Chill
+        Rate: 5000
+    Drops:
+#      - Item: High_Weapon_Box
+#        Rate: 5000
+#      - Item: Sgrade_Pocket
+#        Rate: 5000
+      - Item: Old_Card_Album
+        Rate: 3000
+#      - Item: Bradium
+#        Rate: 2000
+#      - Item: Rosebine
+#        Rate: 2000
+#      - Item: Mystic_Bow
+#        Rate: 2000
+#      - Item: Gypsy_Card
+#        Rate: 1
+#        StealProtected: true
+  - Id: 3000
+    AegisName: el_aqua_l
+    Name: Aqua
+    Level: 50
+    Hp: 100000
+    Attack: 550
+    Attack2: 1450
+    Defense: 20
+    MagicDefense: 50
+    Str: 45
+    Agi: 30
+    Vit: 36
+    Int: 55
+    Dex: 85
+    Luk: 30
+    AttackRange: 1
+    Size: Small
+    Race: Plant
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 300
+    AttackDelay: 1672
+    AttackMotion: 672
+    ClientAttackMotion: 288
+    DamageMotion: 480
+    Ai: 07
+    Class: Boss
+    Drops:
+      - Item: Cold_Medicine
+        Rate: 8335

@@ -1,4 +1,4 @@
-in_rogue,386,98,3	script	Plagiarism Master	4_GHOST_STAND,{
+moc_para01,26,174,3	script	Plagiarism Master	4_M_YOYOROGUE,{
 
 	// ---------------- ACCESS CHECK ----------------
 	if (Class != Job_Rogue && Class != Job_Stalker) {

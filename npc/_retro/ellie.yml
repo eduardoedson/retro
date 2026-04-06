@@ -4,9 +4,9 @@ Header:
 
 Body:
   - Name: Ellie
-    Map: prt_in
-    X: 42
-    Y: 94
+    Map: moc_para01
+    X: 12
+    Y: 179
     Direction: West
     Sprite: 4_F_STARFISHGIRL
     Items:

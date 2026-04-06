@@ -436,3 +436,7 @@ moc_para01,20,35,5	script	Office Assistant Neede	814,{
 function	script	F_HasEdenGroupMark	{
 	return (countitem(6219) > 0 || countitem(22508) > 0);
 }
+
+moc_para01,48,15,0	warp	floor2#1	1,1,moc_para01,48,164
+moc_para01,48,162,0	warp	floor1#2	1,1,moc_para01,48,17
+prontera,133,183,0	warp	enter#3	1,1,moc_para01,48,164

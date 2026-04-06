@@ -13,8 +13,8 @@
 //= 1.1a Added 'disable_items' command. [Euphy]
 //============================================================
 
-prt_in,47,115,3	script	Perchik	4_M_SOULREAPER,{
-	
+moc_para01,11,164,3	script	Perchik	4_M_SOULREAPER,{
+
 	setarray .@Item[0],1230002,1;	// Item requirements: <ID>,<Count>{,...} (0 to disable)
 	setarray .@Cost[0],0,0;	// Zeny requirements: <base price>,<price per refine>
 

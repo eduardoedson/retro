@@ -4,9 +4,9 @@ Header:
 
 Body:
   - Name: Chrome
-    Map: prt_in
-    X: 39
-    Y: 94
+    Map: moc_para01
+    X: 14
+    Y: 179
     Direction: West
     Sprite: 4_M_BELIEVER02
     Items:
