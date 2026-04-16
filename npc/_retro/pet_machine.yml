@@ -1,0 +1,242 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: Pet Machine
+    Map: moc_para01
+    X: 40
+    Y: 161
+    Direction: West
+    Sprite: 2_DROP_MACHINE
+    Items:
+      - Index: 0
+        Item: Angeling_Egg
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Angelic_Chain
+            Amount: 5
+          - Index: 3
+            Item: Satanic_Chain
+            Amount: 5
+          - Index: 4
+            Item: Jellopy
+            Amount: 2000
+          - Index: 5
+            Item: Unripe_Apple
+            Amount: 10
+      - Index: 1
+        Item: Moonlight_Egg
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Nine_Tail_Card
+            Amount: 10
+          - Index: 3
+            Item: Moonlight_Sword
+            Amount: 1
+          - Index: 4
+            Item: Fox_Tail
+            Amount: 2000
+          - Index: 5
+            Item: Gold
+            Amount: 15
+      - Index: 2
+        Item: Gloom_Under_Egg
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Hurricane_Fury
+            Amount: 1
+          - Index: 3
+            Item: Isilla_Card
+            Amount: 20
+          - Index: 4
+            Item: Agav_Card
+            Amount: 20
+          - Index: 5
+            Item: Will_Of_Darkness
+            Amount: 2000
+      - Index: 3
+        Item: Baphomet_Egg
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Magestic_Goat
+            Amount: 1
+          - Index: 3
+            Item: Halberd_
+            Amount: 5
+          - Index: 4
+            Item: Baphomet__Card
+            Amount: 20
+          - Index: 5
+            Item: Evil_Horn
+            Amount: 2000
+      - Index: 4
+        Item: Eddga_Egg2
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Smoking_Pipe
+            Amount: 3
+          - Index: 3
+            Item: Poo_Poo_Hat
+            Amount: 5
+          - Index: 4
+            Item: Bear's_Foot
+            Amount: 2000
+          - Index: 5
+            Item: Flame_Heart
+            Amount: 2000
+      - Index: 5
+        Item: Dark_Lord_Egg
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Bone_Helm_
+            Amount: 1
+          - Index: 3
+            Item: Evil_Druid_Card
+            Amount: 20
+          - Index: 4
+            Item: Ghoul_Card
+            Amount: 20
+          - Index: 5
+            Item: Skull
+            Amount: 2000
+      - Index: 6
+        Item: Ork_Hero_EGG
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Giant_Axe
+            Amount: 2
+          - Index: 3
+            Item: Ogre_Tooth
+            Amount: 1250
+          - Index: 4
+            Item: Cigar
+            Amount: 5
+          - Index: 5
+            Item: Orcish_Voucher
+            Amount: 2000
+      - Index: 7
+        Item: Phreeoni_Egg
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Weihna
+            Amount: 2
+          - Index: 3
+            Item: Magnolia_Card
+            Amount: 20
+          - Index: 4
+            Item: Fine_Grit
+            Amount: 100
+          - Index: 5
+            Item: Earthworm_Peeling
+            Amount: 2000
+      - Index: 8
+        Item: Bacsojin_Egg2
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Tiara
+            Amount: 2
+          - Index: 3
+            Item: Hair_Protector
+            Amount: 20
+          - Index: 4
+            Item: Amulet
+            Amount: 100
+          - Index: 5
+            Item: Cat_Eyed_Stone
+            Amount: 2000
+      - Index: 9
+        Item: Kiel_Egg
+        Stock: 0
+        Zeny: 10000000
+        RequiredItems:
+          - Index: 0
+            Item: Bronze_Coin_Custom
+            Amount: 1000
+          - Index: 1
+            Item: Gold_Coin_Custom
+            Amount: 50
+          - Index: 2
+            Item: Survival_Rod_
+            Amount: 1
+          - Index: 3
+            Item: Alicel_Card
+            Amount: 20
+          - Index: 4
+            Item: Aliot_Card
+            Amount: 20
+          - Index: 5
+            Item: Screw
+            Amount: 2000

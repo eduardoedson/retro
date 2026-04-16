@@ -53,12 +53,22 @@ OnPCKillEvent:
 	.@killer_id = killerrid;
 	.@victim_id = killedrid;
 
+	if (.@killer_id == 0) {
+		.@killer_id = getcharid(3); // fallback para RID atual
+	}
+
+	//dispbottom "[PvP] Killer ID: "+.@killer_id+" | Victim ID: "+.@victim_id;
+
 	.@killer_ip$ = getcharip(.@killer_id);
 	.@victim_ip$ = getcharip(.@victim_id);
 
+	//dispbottom "[PvP] Killer IP: "+.@killer_ip$+" | Victim IP: "+.@victim_ip$;
+
 	// Ajuste HWID conforme seu sistema
-	.@killer_hwid$ = getcharid(3);
-	.@victim_hwid$ = getcharid(3);
+	//.@killer_hwid$ = getcharid(3);
+	//.@victim_hwid$ = getcharid(3);
+
+	//dispbottom "[PvP] Killer HWID: "+.@killer_hwid$+" | Victim HWID: "+.@victim_hwid$;
 
 	//================ ANNOUNCE =================
 	announce "[PvP] "+strcharinfo(0)+" killed "+rid2name(.@victim_id)+"!", bc_all;
@@ -70,14 +80,22 @@ OnPCKillEvent:
 	}
 
 	//================ SAME HWID =================
-	if (.@killer_hwid$ == .@victim_hwid$) {
-		dispbottom "[PvP] No reward (same HWID detected).";
-		end;
-	}
+	//if (.@killer_hwid$ == .@victim_hwid$) {
+	//	dispbottom "[PvP] No reward (same HWID detected).";
+	//	end;
+	//}
 
-	//================ LAST KILL (300s) =================
-	if (gettimetick(2) < #LastKillTime + 300 && #LastKilledRID == .@victim_id) {
-		dispbottom "[PvP] No reward (same target within 5 minutes).";
+	//================ LAST KILL =================
+	.@now = gettimetick(2);
+	.@cooldown = 600;
+	.@remaining = (#LastKillTime + .@cooldown) - .@now;
+
+	if (.@remaining > 0 && #LastKilledRID == .@victim_id) {
+
+		.@minutes = .@remaining / 60;
+		.@seconds = .@remaining % 60;
+
+		dispbottom "[PvP] No reward (same target). Time left: "+.@minutes+"m "+.@seconds+"s";
 		end;
 	}
 
