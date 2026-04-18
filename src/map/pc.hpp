@@ -953,6 +953,8 @@ public:
 
 	std::vector<uint32> party_booking_requests;
 
+	t_tick monster_champion_tick;
+
 	void update_look( _look look );
 
 	int32 goldpc_tid;

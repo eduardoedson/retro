@@ -4219,6 +4219,37 @@ int32 unit_free(block_list *bl, clr_type clrtype)
 	return 0;
 }
 
+void unit_hateffect(struct block_list* bl, int16 effectID, bool enable, bool send)
+{
+	struct unit_data* ud;
+	map_session_data* sd;
+
+	if (!bl || !(ud = unit_bl2ud(bl)))
+		return;
+
+	sd = BL_CAST(BL_PC, bl);
+	auto it = util::vector_get(ud->hatEffects, effectID);
+
+	if (enable) {
+		if (it != ud->hatEffects.end()) {
+			return;
+		}
+
+		ud->hatEffects.push_back(effectID);
+	}
+	else {
+		if (it == ud->hatEffects.end()) {
+			return;
+		}
+
+		util::vector_erase_if_exists(ud->hatEffects, effectID);
+	}
+
+	if (send || !enable) {
+		clif_hat_effect_single(*bl, effectID, enable);
+	}
+}
+
 static TIMER_FUNC(unit_shadowscar_timer) {
 	block_list *bl = map_id2bl(id);
 

@@ -504,13 +504,13 @@ struct view_data* mob_get_viewdata(int32 mob_id);
 void mob_set_dynamic_viewdata( mob_data* md );
 void mob_free_dynamic_viewdata( mob_data* md );
 
-mob_data *mob_once_spawn_sub(block_list *bl, int16 m, int16 x, int16 y, const char *mobname, int32 mob_id, const char *event, uint32 size, enum mob_ai ai);
+mob_data *mob_once_spawn_sub(block_list *bl, int16 m, int16 x, int16 y, const char *mobname, int32 mob_id, const char *event, uint32 size, enum mob_ai ai, int32 champion = 0);
 
 int32 mob_once_spawn(map_session_data* sd, int16 m, int16 x, int16 y,
-	const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai);
+	const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai, int32 champion = 0);
 
 int32 mob_once_spawn_area(map_session_data* sd, int16 m,
-	int16 x0, int16 y0, int16 x1, int16 y1, const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai);
+	int16 x0, int16 y0, int16 x1, int16 y1, const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai, int32 champion = 0);
 
 bool mob_ksprotected (block_list *src, block_list *target);
 
@@ -577,6 +577,7 @@ int32 mob_getdroprate(block_list *src, std::shared_ptr<s_mob_db> mob, int32 base
 // MvP Tomb System
 int32 mvptomb_setdelayspawn(npc_data *nd);
 TIMER_FUNC(mvptomb_delayspawn);
+TIMER_FUNC(mob_champion_timer);
 void mvptomb_create(mob_data *md, char *killer, time_t time);
 void mvptomb_destroy(mob_data *md);
 

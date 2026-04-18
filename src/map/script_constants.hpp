@@ -10289,6 +10289,17 @@
 	export_constant(FOOTPRINT_EF_FEATHER);
 	export_constant(HAT_EF_SOLID_STATE_RECOGNITION);
 	export_constant(HAT_EF_C_CURSED_SERPENT);
+	export_constant(HAT_EF_CM_RED_AURA);
+	export_constant(HAT_EF_CM_GRAY_AURA);
+	export_constant(HAT_EF_CM_BLUE_AURA);
+	export_constant(HAT_EF_CM_YELLOW_AURA);
+	export_constant(HAT_EF_CM_PINK_AURA);
+	export_constant(HAT_EF_CM_GREEN_AURA);
+	export_constant(HAT_EF_CM_FURIOUS);
+	export_constant(HAT_EF_CM_BEATER);
+	export_constant(HAT_EF_CM_EXPERIENT);
+	export_constant(HAT_EF_CM_PRECIOUS);
+	export_constant(HAT_EF_CM_CHALLENGER);
 
 	/* pet catch */
 	export_constant(PET_CATCH_UNIVERSAL_NO_BOSS);

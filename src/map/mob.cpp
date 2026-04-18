@@ -5,6 +5,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <cstdio>
 #include <cstdlib>
 #include <map>
 #include <unordered_map>
@@ -40,6 +41,8 @@
 #include "pc.hpp"
 #include "pet.hpp"
 #include "quest.hpp"
+#include "mapreg.hpp"
+#include "unit.hpp"
 
 using namespace rathena;
 
@@ -576,6 +579,7 @@ mob_data* mob_spawn_dataset(struct spawn_data *data)
 	md->mob_id = data->id;
 	md->state.boss = data->state.boss;
 	md->db = mob_db.find(md->mob_id);
+
 	if (data->level > 0)
 		md->level = data->level;
 	memcpy(md->name, data->name, NAME_LENGTH);
@@ -735,7 +739,7 @@ bool mob_ksprotected (block_list *src, block_list *target)
 	return false;
 }
 
-mob_data *mob_once_spawn_sub(block_list *bl, int16 m, int16 x, int16 y, const char *mobname, int32 mob_id, const char *event, uint32 size, enum mob_ai ai)
+mob_data *mob_once_spawn_sub(block_list *bl, int16 m, int16 x, int16 y, const char *mobname, int32 mob_id, const char *event, uint32 size, enum mob_ai ai, int32 champion)
 {
 	struct spawn_data data;
 
@@ -778,7 +782,7 @@ mob_data *mob_once_spawn_sub(block_list *bl, int16 m, int16 x, int16 y, const ch
 /*==========================================
  * Spawn a single mob on the specified coordinates.
  *------------------------------------------*/
-int32 mob_once_spawn(map_session_data* sd, int16 m, int16 x, int16 y, const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai)
+int32 mob_once_spawn(map_session_data* sd, int16 m, int16 x, int16 y, const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai, int32 champion)
 {
 	mob_data* md = nullptr;
 	int32 count, lv;
@@ -791,7 +795,7 @@ int32 mob_once_spawn(map_session_data* sd, int16 m, int16 x, int16 y, const char
 	for (count = 0; count < amount; count++)
 	{
 		int32 c = (mob_id >= 0) ? mob_id : mob_get_random_id(-mob_id - 1, (battle_config.random_monster_checklv) ? static_cast<e_random_monster_flags>(RMF_DB_RATE|RMF_CHECK_MOB_LV) : RMF_DB_RATE, lv);
-		md = mob_once_spawn_sub((sd) ? sd : nullptr, m, x, y, mobname, c, event, size, ai);
+		md = mob_once_spawn_sub((sd) ? sd : nullptr, m, x, y, mobname, c, event, size, ai, champion);
 
 		if (!md)
 			continue;
@@ -817,7 +821,19 @@ int32 mob_once_spawn(map_session_data* sd, int16 m, int16 x, int16 y, const char
 			}
 		}	// end addition [Valaris]
 
+		// Champion monster
+		if(champion > 0){
+			md->bl.champion_monster = champion;
+		}else
+			md->bl.champion_monster = 0;
+
 		mob_spawn(md);
+
+		// Enable effects on champion monsters
+		if(md->bl.champion_monster){
+			int champion_effect[] = {303, 308, 305, 306};
+			unit_hateffect(&md->bl,champion_effect[md->bl.champion_monster-1],true,true);
+		}
 
 		if (mob_id < 0 && battle_config.dead_branch_active)
 			//Behold Aegis's masterful decisions yet again...
@@ -831,7 +847,7 @@ int32 mob_once_spawn(map_session_data* sd, int16 m, int16 x, int16 y, const char
 /*==========================================
  * Spawn mobs in the specified area.
  *------------------------------------------*/
-int32 mob_once_spawn_area(map_session_data* sd, int16 m, int16 x0, int16 y0, int16 x1, int16 y1, const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai)
+int32 mob_once_spawn_area(map_session_data* sd, int16 m, int16 x0, int16 y0, int16 x1, int16 y1, const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai, int32 champion)
 {
 	int32 i, max, id = 0;
 	int32 lx = -1, ly = -1;
@@ -877,7 +893,7 @@ int32 mob_once_spawn_area(map_session_data* sd, int16 m, int16 x0, int16 y0, int
 		lx = x;
 		ly = y;
 
-		id = mob_once_spawn(sd, m, x, y, mobname, mob_id, 1, event, size, ai);
+		id = mob_once_spawn(sd, m, x, y, mobname, mob_id, 1, event, size, ai, champion);
 	}
 
 	return id; // id of last spawned mob
@@ -2735,6 +2751,7 @@ TIMER_FUNC(mob_timer_delete){
 	return 0;
 }
 
+
 /*==========================================
  *
  *------------------------------------------*/
@@ -3048,6 +3065,13 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 	int32 i, temp, count, m = md->m;
 	int32 dmgbltypes = 0;  // bitfield of all bl types, that caused damage to the mob and are elligible for exp distribution
 	t_tick tick = gettick();
+	char champion_key[64] = {};
+	int32 champion = 0;
+
+	if (md->bl.champion_monster) {
+		snprintf(champion_key, sizeof(champion_key), "$monster_champion_%d", md->bl.champion_monster);
+		champion = static_cast<int32>(mapreg_readreg(add_str(champion_key)));
+	}
 	bool rebirth, homkillonly, merckillonly;
 
 	status = &md->status;
@@ -3319,6 +3343,15 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 								job_exp = (t_exp)cap_value(apply_rate(job_exp, rate), 1, MAX_EXP);
 						}
 #endif
+						if (md->bl.champion_monster && champion == md->bl.id) {
+							if (md->bl.champion_monster == 1) {
+								base_exp += base_exp * 10 / 100;
+								job_exp += job_exp * 10 / 100;
+							} else if (md->bl.champion_monster == 3) {
+								base_exp += base_exp;
+								job_exp += job_exp;
+							}
+						}
 						pc_gainexp(tmpsd[i], md, base_exp, job_exp, 0);
 					}
 				}
@@ -3454,6 +3487,10 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 			// Announce first, or else ditem will be freed. [Lance]
 			// By popular demand, use base drop rate for autoloot code. [Skotlex]
 			mob_item_drop(md, dlist, ditem, 0, battle_config.autoloot_adjust ? drop_rate : entry->rate, homkillonly || merckillonly);
+		}
+
+		if (md->bl.champion_monster && champion == md->bl.id) {
+			mapreg_setreg(add_str(champion_key), 0);
 		}
 
 		// Ore Discovery (triggers if owner has loot priority, does not require to be the killer)

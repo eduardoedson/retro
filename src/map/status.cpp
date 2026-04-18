@@ -35,6 +35,7 @@
 #include "pc_groups.hpp"
 #include "pet.hpp"
 #include "script.hpp"
+#include "mapreg.hpp"
 
 using namespace rathena;
 
@@ -1683,7 +1684,20 @@ int32 status_damage(block_list *src,block_list *target,int64 dhp, int64 dsp, int
 	**/
 	switch (target->type) {
 		case BL_PC:  flag = pc_dead((TBL_PC*)target,src); break;
-		case BL_MOB: flag = mob_dead((TBL_MOB*)target, src, flag&4?3:0); break;
+		case BL_MOB: {
+			flag = mob_dead((TBL_MOB*)target, src, flag & 4 ? 3 : 0);
+			// Read the champion monster variable.
+			char key[256];
+			sprintf(key, "$monster_champion_%d", ((TBL_MOB*)target)->bl.champion_monster);
+			int champion = static_cast<int>(mapreg_readreg(add_str(key)));
+			if (champion && ((TBL_MOB*)target)->bl.champion_monster == 4) {
+				for (int i = 0; i < 10; i++) {
+					clif_specialeffect(target, 268, AREA);
+					mob_dead((TBL_MOB*)target, src, flag & 4 ? 3 : 0);
+				}
+			}
+		}
+			break;
 		case BL_HOM: flag = hom_dead((TBL_HOM*)target); break;
 		case BL_MER: flag = mercenary_dead((TBL_MER*)target); break;
 		case BL_ELEM: flag = elemental_dead((TBL_ELEM*)target); break;

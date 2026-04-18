@@ -769,6 +769,7 @@ struct Battle_Config
 	int32 instance_allow_reconnect;
 	int32 synchronize_damage;
 	int32 item_stacking;
+	int32 group_id_monster_champion;
 	int32 hom_delay_reset_vaporize;
 	int32 hom_delay_reset_warp;
 	int32 alchemist_summon_setting;

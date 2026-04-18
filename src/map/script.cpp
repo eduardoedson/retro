@@ -30,6 +30,7 @@
 #include <common/timer.hpp>
 #include <common/utilities.hpp>
 #include <common/utils.hpp>
+#include <common/ers.hpp>
 
 #include "achievement.hpp"
 #include "atcommand.hpp"
@@ -11246,6 +11247,7 @@ BUILDIN_FUNC(monster)
 	const char* event	= "";
 	uint32 size	= SZ_SMALL;
 	enum mob_ai ai		= AI_NONE;
+	int32 monster_champion = script_hasdata(st, 11) ? script_getnum(st, 11) : 0;
 
 	map_session_data* sd;
 	int16 m;
@@ -11302,7 +11304,7 @@ BUILDIN_FUNC(monster)
 	TBL_MOB* md;
 
 	for(i = 0; i < amount; i++) { //not optimised
-		int32 mobid = mob_once_spawn(sd, m, x, y, str, class_, 1, event, size, ai);
+		int32 mobid = mob_once_spawn(sd, m, x, y, str, class_, 1, event, size, ai, monster_champion);
 
 		if (mobid > 0) {
 			md = map_id2md(mobid);
@@ -27841,6 +27843,144 @@ BUILDIN_FUNC(preg_match) {
 #endif
 }
 
+BUILDIN_FUNC(hateffect_npc){
+ #if PACKETVER_MAIN_NUM >= 20150507 || PACKETVER_RE_NUM >= 20150429 || defined(PACKETVER_ZERO)
+	int16 effectID = script_getnum(st,2);
+	bool enable = script_getnum(st,3) ? true : false;
+
+	struct block_list* bl;
+	bool send = true;
+
+	if (script_hasdata(st, 4)) {
+		bl = map_id2bl(script_getnum(st, 4));
+	}
+	else {
+		bl = map_id2bl(st->rid);
+		map_session_data* sd = BL_CAST(BL_PC, bl);
+
+		if (sd && sd->state.connect_new) {
+			send = false;
+		}
+	}
+
+	unit_hateffect(bl, effectID, enable, send);
+ #endif
+	return SCRIPT_CMD_SUCCESS;
+}
+
+BUILDIN_FUNC( statusmes ){
+	ShowStatus( "%s\n", script_getstr( st, 2 ) );
+	return SCRIPT_CMD_SUCCESS;
+}
+
+BUILDIN_FUNC( infomes ){
+	ShowInfo( "%s\n", script_getstr( st, 2 ) );
+	return SCRIPT_CMD_SUCCESS;
+}
+
+BUILDIN_FUNC(specialeffect3)
+{
+	struct block_list *bl = NULL;
+	int id = 0;
+	int type = script_getnum(st,2);
+	enum send_target target = script_hasdata(st,3) ? (send_target)script_getnum(st,3) : AREA;
+
+	if (script_hasdata(st,4)) {
+		id = script_getnum(st,4);
+		bl = map_id2bl(id);
+	}
+	else {
+		bl = st->rid ? map_id2bl(st->rid) : map_id2bl(st->oid);
+	}
+
+	if(bl == NULL)
+		return SCRIPT_CMD_SUCCESS;
+
+	if( type <= EF_NONE || type >= EF_MAX ){
+		ShowError( "buildin_specialeffect: unsupported effect id %d\n", type );
+		return SCRIPT_CMD_FAILURE;
+	}
+
+	if (target == SELF) {
+		TBL_PC *sd;
+		if (script_rid2sd(sd))
+			clif_specialeffect_single(bl,type,sd->fd);
+	} else {
+		clif_specialeffect(bl, type, target);
+	}
+	return SCRIPT_CMD_SUCCESS;
+}
+
+//<map>,x,y,mob_id,<CHAR_ID>
+BUILDIN_FUNC(champion_drop) {
+	map_session_data* sd;
+	int x, y;
+	char mapname[MAP_NAME_LENGTH];
+
+	if (!script_hasdata(st, 5)) {
+		ShowError("buildin_champion_drop: mob_id is null\n");
+		return SCRIPT_CMD_FAILURE;
+	}
+
+	if (!script_charid2sd(6, sd)) {
+		ShowError("buildin_champion_drop: player not attached\n");
+		return SCRIPT_CMD_FAILURE;
+	}
+
+	std::shared_ptr<s_mob_db> md = mob_db.find(script_getnum(st, 5));
+	if (md == nullptr) {
+		ShowError("buildin_champion_drop: mob_id not found: %d\n", script_getnum(st, 5));
+		return SCRIPT_CMD_FAILURE;
+	}
+
+	if (!script_isstring(st, 2)) {
+		ShowError("buildin_champion_drop: mapname is not a string: %d\n", script_getnum(st, 2));
+		return SCRIPT_CMD_FAILURE;
+	}
+
+	strcpy(mapname, script_getstr(st, 2));
+	x = script_getnum(st, 3);
+	y = script_getnum(st, 4);
+	int drop_modifier = 100;
+
+	for (const std::shared_ptr<s_mob_drop>& mdrop : md->dropitem) {
+		if (mdrop == nullptr || mdrop->nameid == 0)
+			continue;
+
+		std::shared_ptr<item_data> i_data = item_db.find(mdrop->nameid);
+
+		if (i_data == nullptr)
+			continue;
+
+		int droprate = mob_getdroprate(&sd->bl, md, mdrop->rate, drop_modifier);
+
+		if (rnd() % 10000 >= droprate)
+			continue;
+
+		if (sd && i_data->type == IT_PETEGG) {
+			pet_create_egg(sd, mdrop->nameid);
+			continue;
+		}
+
+		// A Rare Drop Global Announce
+		if (sd && mdrop->rate <= battle_config.rare_drop_announce) {
+			char message[128];
+			sprintf(message, msg_txt(nullptr, 541), sd->status.name, md->name.c_str(), i_data->ename.c_str(), (float)droprate / 100);
+			// MSG: "'%s' won %s's %s (chance: %0.02f%%)"
+			intif_broadcast(message, strlen(message) + 1, BC_DEFAULT);
+		}
+		struct item item = {};
+		item.nameid=mdrop->nameid;
+		item.identify= itemdb_isidentified(item.nameid);
+
+		mob_setdropitem_option(item, mdrop);
+
+		map_addflooritem(&item, 1, map_mapname2mapid(mapname), x, y, sd->status.char_id, 0, 0, 1, 0, true);
+	}
+	return SCRIPT_CMD_SUCCESS;
+}
+
+
 /// script command definitions
 /// for an explanation on args, see add_buildin_func
 struct script_function buildin_func[] = {
@@ -27993,7 +28133,7 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(itemskill,"vi?"),
 	BUILDIN_DEF(produce,"i"),
 	BUILDIN_DEF(cooking,"i"),
-	BUILDIN_DEF(monster,"siisvi???"),
+	BUILDIN_DEF(monster,"siisvi????"),
 	BUILDIN_DEF(getmobdrops,"i"),
 	BUILDIN_DEF(areamonster,"siiiisvi???"),
 	BUILDIN_DEF(killmonster,"ss?"),
@@ -28556,6 +28696,11 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(has_autoloot,"?"),
 	BUILDIN_DEF(autoloot,"??"),
 	BUILDIN_DEF(opentips, "i?"),
+	BUILDIN_DEF(hateffect_npc,"ii?"),
+	BUILDIN_DEF(statusmes,"s"),
+	BUILDIN_DEF(infomes,"s"),
+	BUILDIN_DEF(specialeffect3,"i??"),
+	BUILDIN_DEF(champion_drop,"siii?"),
 	BUILDIN_DEF(specialpopup,"i"),
 
 	BUILDIN_DEF(setdialogalign, "i"),

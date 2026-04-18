@@ -201,4 +201,6 @@ void unit_addshadowscar(unit_data &ud, int32 interval);
 void do_init_unit(void);
 void do_final_unit(void);
 
+void unit_hateffect(struct block_list* bl, int16 effectID, bool enable, bool send);
+
 #endif /* UNIT_HPP */
