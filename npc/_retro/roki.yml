@@ -778,3 +778,11 @@ Body:
           - Index: 0
             Item: BF_Badge1
             Amount: 2000
+      - Index: 97
+        Item: BF_Bow1
+        Stock: 0
+        Zeny: 0
+        RequiredItems:
+          - Index: 0
+            Item: BF_Badge1
+            Amount: 100
