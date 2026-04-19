@@ -11247,7 +11247,6 @@ BUILDIN_FUNC(monster)
 	const char* event	= "";
 	uint32 size	= SZ_SMALL;
 	enum mob_ai ai		= AI_NONE;
-	int32 monster_champion = script_hasdata(st, 11) ? script_getnum(st, 11) : 0;
 
 	map_session_data* sd;
 	int16 m;
@@ -11304,7 +11303,7 @@ BUILDIN_FUNC(monster)
 	TBL_MOB* md;
 
 	for(i = 0; i < amount; i++) { //not optimised
-		int32 mobid = mob_once_spawn(sd, m, x, y, str, class_, 1, event, size, ai, monster_champion);
+		int32 mobid = mob_once_spawn(sd, m, x, y, str, class_, 1, event, size, ai);
 
 		if (mobid > 0) {
 			md = map_id2md(mobid);
@@ -27911,76 +27910,6 @@ BUILDIN_FUNC(specialeffect3)
 	return SCRIPT_CMD_SUCCESS;
 }
 
-//<map>,x,y,mob_id,<CHAR_ID>
-BUILDIN_FUNC(champion_drop) {
-	map_session_data* sd;
-	int x, y;
-	char mapname[MAP_NAME_LENGTH];
-
-	if (!script_hasdata(st, 5)) {
-		ShowError("buildin_champion_drop: mob_id is null\n");
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if (!script_charid2sd(6, sd)) {
-		ShowError("buildin_champion_drop: player not attached\n");
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	std::shared_ptr<s_mob_db> md = mob_db.find(script_getnum(st, 5));
-	if (md == nullptr) {
-		ShowError("buildin_champion_drop: mob_id not found: %d\n", script_getnum(st, 5));
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	if (!script_isstring(st, 2)) {
-		ShowError("buildin_champion_drop: mapname is not a string: %d\n", script_getnum(st, 2));
-		return SCRIPT_CMD_FAILURE;
-	}
-
-	strcpy(mapname, script_getstr(st, 2));
-	x = script_getnum(st, 3);
-	y = script_getnum(st, 4);
-	int drop_modifier = 100;
-
-	for (const std::shared_ptr<s_mob_drop>& mdrop : md->dropitem) {
-		if (mdrop == nullptr || mdrop->nameid == 0)
-			continue;
-
-		std::shared_ptr<item_data> i_data = item_db.find(mdrop->nameid);
-
-		if (i_data == nullptr)
-			continue;
-
-		int droprate = mob_getdroprate((block_list*)sd, md, mdrop->rate, drop_modifier);
-
-		if (rnd() % 10000 >= droprate)
-			continue;
-
-		if (sd && i_data->type == IT_PETEGG) {
-			pet_create_egg(sd, mdrop->nameid);
-			continue;
-		}
-
-		// A Rare Drop Global Announce
-		if (sd && mdrop->rate <= battle_config.rare_drop_announce) {
-			char message[128];
-			sprintf(message, msg_txt(nullptr, 541), sd->status.name, md->name.c_str(), i_data->ename.c_str(), (float)droprate / 100);
-			// MSG: "'%s' won %s's %s (chance: %0.02f%%)"
-			intif_broadcast(message, strlen(message) + 1, BC_DEFAULT);
-		}
-		struct item item = {};
-		item.nameid=mdrop->nameid;
-		item.identify= itemdb_isidentified(item.nameid);
-
-		mob_setdropitem_option(item, mdrop);
-
-		map_addflooritem(&item, 1, map_mapname2mapid(mapname), x, y, sd->status.char_id, 0, 0, 1, 0, true);
-	}
-	return SCRIPT_CMD_SUCCESS;
-}
-
-
 /// script command definitions
 /// for an explanation on args, see add_buildin_func
 struct script_function buildin_func[] = {
@@ -28700,7 +28629,6 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(statusmes,"s"),
 	BUILDIN_DEF(infomes,"s"),
 	BUILDIN_DEF(specialeffect3,"i??"),
-	BUILDIN_DEF(champion_drop,"siii?"),
 	BUILDIN_DEF(specialpopup,"i"),
 
 	BUILDIN_DEF(setdialogalign, "i"),

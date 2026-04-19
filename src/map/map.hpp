@@ -463,7 +463,6 @@ struct block_list {
 	int32 id;
 	int16 m,x,y;
 	enum bl_type type;
-	int32 champion_monster;
 };
 
 

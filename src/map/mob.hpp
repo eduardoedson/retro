@@ -504,13 +504,13 @@ struct view_data* mob_get_viewdata(int32 mob_id);
 void mob_set_dynamic_viewdata( mob_data* md );
 void mob_free_dynamic_viewdata( mob_data* md );
 
-mob_data *mob_once_spawn_sub(block_list *bl, int16 m, int16 x, int16 y, const char *mobname, int32 mob_id, const char *event, uint32 size, enum mob_ai ai, int32 champion = 0);
+mob_data *mob_once_spawn_sub(block_list *bl, int16 m, int16 x, int16 y, const char *mobname, int32 mob_id, const char *event, uint32 size, enum mob_ai ai);
 
 int32 mob_once_spawn(map_session_data* sd, int16 m, int16 x, int16 y,
-	const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai, int32 champion = 0);
+	const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai);
 
 int32 mob_once_spawn_area(map_session_data* sd, int16 m,
-	int16 x0, int16 y0, int16 x1, int16 y1, const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai, int32 champion = 0);
+	int16 x0, int16 y0, int16 x1, int16 y1, const char* mobname, int32 mob_id, int32 amount, const char* event, uint32 size, enum mob_ai ai);
 
 bool mob_ksprotected (block_list *src, block_list *target);
 
