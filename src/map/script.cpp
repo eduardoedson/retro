@@ -27952,7 +27952,7 @@ BUILDIN_FUNC(champion_drop) {
 		if (i_data == nullptr)
 			continue;
 
-		int droprate = mob_getdroprate(&sd->bl, md, mdrop->rate, drop_modifier);
+		int droprate = mob_getdroprate((block_list*)sd, md, mdrop->rate, drop_modifier);
 
 		if (rnd() % 10000 >= droprate)
 			continue;

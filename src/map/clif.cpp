@@ -10037,7 +10037,7 @@ void clif_name( block_list* src, block_list *bl, send_target target ){
 				safestrncpy( packet.position_name, md->guardian_data->castle->castle_name, NAME_LENGTH );
 
 				clif_send(&packet, sizeof(packet), src, target);
-			}else if( battle_config.show_mob_info && !md->bl.champion_monster ){
+			}else if( battle_config.show_mob_info && !md->champion_monster ){
 				PACKET_ZC_ACK_REQNAMEALL packet = { 0 };
 
 				packet.packet_id = HEADER_ZC_ACK_REQNAMEALL;
@@ -10066,10 +10066,10 @@ void clif_name( block_list* src, block_list *bl, send_target target ){
 
 				clif_send(&packet, sizeof(packet), src, target);
 			} else {
-				if(md->bl.champion_monster){
+				if(md->champion_monster){
 					unit_data *ud = unit_bl2ud(bl);
 					if (ud != nullptr) {
-						if(md->bl.champion_monster){
+						if(md->champion_monster){
 							md->ud.group_id = battle_config.group_id_monster_champion;
 							unit_refresh(bl);
 						}
@@ -10078,7 +10078,7 @@ void clif_name( block_list* src, block_list *bl, send_target target ){
 					        packet.packet_id = HEADER_ZC_ACK_REQNAMEALL_NPC;
 					        packet.gid = bl->id;
 							char mobhp[100], * str_p = mobhp;
-							safestrncpy(ud->title, msg_txt(nullptr,2000+md->bl.champion_monster), NAME_LENGTH);
+							safestrncpy(ud->title, msg_txt(nullptr,2000+md->champion_monster), NAME_LENGTH);
 							memcpy(packet.name, ud->title, NAME_LENGTH);
 							str_p += sprintf(str_p, "%s (HP: %u%%) | ", md->name, get_percentage(md->status.hp, md->status.max_hp));
 							if (str_p != mobhp) {

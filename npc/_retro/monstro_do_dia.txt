@@ -1,0 +1,133 @@
+prontera,144,198,0	script	Monster of the Day	835,{
+
+    end;
+
+    OnNPCKillEvent:
+        // Check by monster ID
+        if (killedrid != .motd_id) end;
+
+        // Check chance
+        if (rand(100) >= .chance) end;
+
+        .@party_id = getcharid(1);
+
+        // Solo player
+        if (!.@party_id) {
+            //dispbottom "You killed the Monster of the Day!";
+
+            if (.base_exp_bonus > 0) BaseExp += .base_exp_bonus;
+            if (.job_exp_bonus > 0) JobExp += .job_exp_bonus;
+            if (.zeny > 0) Zeny += .zeny;
+
+            for (.@i = 0; .@i < getarraysize(.items); .@i++) {
+                if (getitemname(.items[.@i]) != "null") {
+                    getitem .items[.@i], .item_quantities[.@i];
+                    dispbottom "Received: " + .item_quantities[.@i] + "x " + getitemname(.items[.@i]);
+                } else {
+                    dispbottom "Error: Item " + .items[.@i] + " does not exist!";
+                }
+            }
+        }
+        // Party members
+        else {
+            .@map$ = strcharinfo(3);
+            addrid(2, 0, .@party_id);
+            if (strcharinfo(3) == .@map$ && Hp) {
+                //dispbottom "Your party killed the Monster of the Day!";
+
+                if (.base_exp_bonus > 0) BaseExp += .base_exp_bonus;
+                if (.job_exp_bonus > 0) JobExp += .job_exp_bonus;
+                if (.zeny > 0) Zeny += .zeny;
+
+                for (.@i = 0; .@i < getarraysize(.items); .@i++) {
+                    if (getitemname(.items[.@i]) != "null") {
+                        getitem .items[.@i], .item_quantities[.@i];
+                        dispbottom "Received: " + .item_quantities[.@i] + "x " + getitemname(.items[.@i]);
+                    } else {
+                        dispbottom "Error: Item " + .items[.@i] + " does not exist!";
+                    }
+                }
+            }
+        }
+        end;
+
+    OnClock0000:
+        callsub S_SelectMonster;
+        callsub S_UpdateDisplay;
+        end;
+
+    OnInit:
+        .zeny = 0;
+        .job_exp_bonus = 0;
+        .base_exp_bonus = 0;
+
+        setarray .items[0], 1230002;
+        setarray .item_quantities[0], 1;
+
+        .chance = 25;
+
+        // MVP list (same as Disguise)
+        setarray .MVP[0],
+            1038,1039,1046,1059,1086,1087,1112,1115,1147,1150,1157,1159,1190,
+            1251,1252,1272,1312,1373,1389,1399,1418,1492,1502,1511,1583,1623,
+            1630,1646,1647,1648,1649,1650,1651,1658,1685,1688,1708,1719,1734,
+            1751,1768,1779,1785,1802,1832,1871,1874,1885,1917,1980,2022,2068,
+            2087,2131,2156,2165;
+
+        // Blacklist (same logic as Disguise)
+        .BlackList$ =
+            "1003,1006,1017,1021,1022,1027,1043,1075,1136,1137,1168," +
+            "1171,1172,1173,1181,1187,1210,1217,1218,1222,1223,1224,1225,1226,1227,1228," +
+            "1233,1284,1407,1411,1414,1495,1501,1900,1996,2000,2001,2002,2003,2004," +
+            "2005,2006,2007,2011,2012,2025,2028,2029,2030,2031,2032,2033,2034,2035," +
+            "2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,2048,2049," +
+            "2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062,2063," +
+            "2064,2065,2066,2067,2075,2076,2077,2078,2079,2080,2081,2083,2084,2085," +
+            "2086,2087,2088,2089,2090,2091,2092,2093,2094,2095,2096,2097,2098,2099," +
+            "2100,2101,2012,2103,2104,2105,2106,2107,2108,2109,2110,2111,2112,2113," +
+            "2114,2115,2116,2117,2118,2119,2120,2121,2123,2124,2125,1496,";
+
+        callsub S_SelectMonster;
+        callsub S_UpdateDisplay;
+        end;
+
+    // =========================
+    // SELECT RANDOM MONSTER ID
+    // =========================
+    S_SelectMonster:
+        while (true) {
+            .@mob = 1000 + rand(1, 995); // Range similar to Disguise
+
+            // Skip blacklist
+            if (compare("," + .BlackList$ + ",", "," + .@mob + ",")) continue;
+
+            // Skip MVPs
+            for (.@i = 0; .@i < getarraysize(.MVP); .@i++) {
+                if (.@mob == .MVP[.@i]) {
+                    .@mob = 0;
+                    break;
+                }
+            }
+            if (!.@mob) continue;
+
+            // Avoid repeating same monster
+            if (.@mob == .last_mob) continue;
+
+            .motd_id = .@mob;
+            .last_mob = .@mob;
+            break;
+        }
+
+        .motd$ = getmonsterinfo(.motd_id, MOB_NAME);
+        return;
+
+    // =========================
+    // UPDATE DISPLAY + ANNOUNCE
+    // =========================
+    S_UpdateDisplay:
+        delwaitingroom;
+        waitingroom "[MOTD] " + .motd$, 0;
+
+        announce "The Monster of the Day has changed. The new monster is " + .motd$, 0;
+        return;
+}

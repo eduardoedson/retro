@@ -1688,9 +1688,9 @@ int32 status_damage(block_list *src,block_list *target,int64 dhp, int64 dsp, int
 			flag = mob_dead((TBL_MOB*)target, src, flag & 4 ? 3 : 0);
 			// Read the champion monster variable.
 			char key[256];
-			sprintf(key, "$monster_champion_%d", ((TBL_MOB*)target)->bl.champion_monster);
+			sprintf(key, "$monster_champion_%d", ((TBL_MOB*)target)->champion_monster);
 			int champion = static_cast<int>(mapreg_readreg(add_str(key)));
-			if (champion && ((TBL_MOB*)target)->bl.champion_monster == 4) {
+			if (champion && ((TBL_MOB*)target)->champion_monster == 4) {
 				for (int i = 0; i < 10; i++) {
 					clif_specialeffect(target, 268, AREA);
 					mob_dead((TBL_MOB*)target, src, flag & 4 ? 3 : 0);

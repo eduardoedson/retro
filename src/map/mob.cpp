@@ -823,16 +823,16 @@ int32 mob_once_spawn(map_session_data* sd, int16 m, int16 x, int16 y, const char
 
 		// Champion monster
 		if(champion > 0){
-			md->bl.champion_monster = champion;
+			md->champion_monster = champion;
 		}else
-			md->bl.champion_monster = 0;
+			md->champion_monster = 0;
 
 		mob_spawn(md);
 
 		// Enable effects on champion monsters
-		if(md->bl.champion_monster){
+		if(md->champion_monster){
 			int champion_effect[] = {303, 308, 305, 306};
-			unit_hateffect(&md->bl,champion_effect[md->bl.champion_monster-1],true,true);
+			unit_hateffect((block_list*)md,champion_effect[md->champion_monster-1],true,true);
 		}
 
 		if (mob_id < 0 && battle_config.dead_branch_active)
@@ -2938,6 +2938,11 @@ int32 mob_getdroprate(block_list *src, std::shared_ptr<s_mob_db> mob, int32 base
 {
 	int32 drop_rate = base_rate;
 
+	// Champion monsters have double drop rate
+	if (md && md->champion_monster) {
+		drop_rate *= 2;
+	}
+
 	if (md && battle_config.mob_size_influence) {  // Change drops depending on monsters size [Valaris]
 		uint32 mob_size = md->special_state.size;
 		if (mob_size == SZ_MEDIUM && drop_rate >= 2)
@@ -3068,8 +3073,8 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 	char champion_key[64] = {};
 	int32 champion = 0;
 
-	if (md->bl.champion_monster) {
-		snprintf(champion_key, sizeof(champion_key), "$monster_champion_%d", md->bl.champion_monster);
+	if (md->champion_monster) {
+		snprintf(champion_key, sizeof(champion_key), "$monster_champion_%d", md->champion_monster);
 		champion = static_cast<int32>(mapreg_readreg(add_str(champion_key)));
 	}
 	bool rebirth, homkillonly, merckillonly;
@@ -3343,14 +3348,10 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 								job_exp = (t_exp)cap_value(apply_rate(job_exp, rate), 1, MAX_EXP);
 						}
 #endif
-						if (md->bl.champion_monster && champion == md->bl.id) {
-							if (md->bl.champion_monster == 1) {
-								base_exp += base_exp * 10 / 100;
-								job_exp += job_exp * 10 / 100;
-							} else if (md->bl.champion_monster == 3) {
-								base_exp += base_exp;
-								job_exp += job_exp;
-							}
+						if (md->champion_monster && champion == md->id) {
+							// All champion monsters give double EXP
+							base_exp += base_exp;
+							job_exp += job_exp;
 						}
 						pc_gainexp(tmpsd[i], md, base_exp, job_exp, 0);
 					}
@@ -3489,7 +3490,7 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 			mob_item_drop(md, dlist, ditem, 0, battle_config.autoloot_adjust ? drop_rate : entry->rate, homkillonly || merckillonly);
 		}
 
-		if (md->bl.champion_monster && champion == md->bl.id) {
+		if (md->champion_monster && champion == md->id) {
 			mapreg_setreg(add_str(champion_key), 0);
 		}
 
