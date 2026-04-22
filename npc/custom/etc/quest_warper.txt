@@ -1602,13 +1602,27 @@ function	script	QWS_Darray	{
 	setarray @pDfee$[@Di], "$QW_AW_FEE";
 	setarray @DLevels[@Di], 4;
 
+	setarray @DGat$[@Dref], "schg_dun01";
+	setarray @DLevelName$[@Dref], "Arunafeltz Guild Dungeon";
+	setarray @DXcoords[@Dref], 201;
+	setarray @DYcoords[@Dref], 124;
+	setarray @DDepth[@Dref], 0;
+
+	QWS_Make_Dungeon_Menu 38;
+
+//----------------Arunafeltz Guild Dungeon
+	setarray @pDmenuitems$[@Di], "Arunafeltz Guild Dungeon";
+	setarray @pDprice[@Di], $QW_AW_PRICE;
+	setarray @pDfee$[@Di], "$QW_AW_FEE";
+	setarray @DLevels[@Di], 4;
+
 	setarray @DGat$[@Dref], "arug_dun01";
 	setarray @DLevelName$[@Dref], "Arunafeltz Guild Dungeon";
 	setarray @DXcoords[@Dref], 205;
 	setarray @DYcoords[@Dref], 10;
 	setarray @DDepth[@Dref], 0;
 
-	QWS_Make_Dungeon_Menu 38;
+	QWS_Make_Dungeon_Menu 39;
 
 //----------------Cancel
 	setarray @pDmenuitems$[@Di], "Cancel";
@@ -1868,5 +1882,5 @@ gld_dun01,112,19,4	script	Dimensius#80	10308,{ callfunc "QWS_Dungeon_Warpra",33,
 gld_dun02,23,163,4	script	Dimensius#81	10308,{ callfunc "QWS_Dungeon_Warpra",34,"Hidden Dungeon"; close; }
 gld_dun03,37,32,4	script	Dimensius#82	10308,{ callfunc "QWS_Dungeon_Warpra",35,"Hidden Dungeon"; close; }
 gld_dun04,34,237,4	script	Dimensius#83	10308,{ callfunc "QWS_Dungeon_Warpra",36,"Hidden Dungeon"; close; }
-schg_dun01,201,124,4	script	Dimensius#84	10308,{ callfunc "QWS_Dungeon_Warpra",37,"Hidden Dungeon"; close; }
-arug_dun01,205,10,4	script	Dimensius#84	10308,{ callfunc "QWS_Dungeon_Warpra",38,"Hidden Dungeon"; close; }
+schg_dun01,201,124,4	script	Dimensius#84	10308,{ callfunc "QWS_Dungeon_Warpra",38,"Hidden Dungeon"; close; }
+arug_dun01,205,10,4	script	Dimensius#84	10308,{ callfunc "QWS_Dungeon_Warpra",39,"Hidden Dungeon"; close; }
