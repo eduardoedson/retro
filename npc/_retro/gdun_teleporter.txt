@@ -1,0 +1,42 @@
+moc_para01,29,185,4	script	Guild Teleport Operator	PORTAL,{
+
+	mes "[Teleporter]";
+	mes "Choose your destination.";
+	mes "Each teleport costs ^FF0000500,000 zeny^000000.";
+
+	switch(select("Greenwood Lake Guild Dungeon:Luina Guild Dungeon:Valkyrie Guild Dungeon:Britoniah Guild Dungeon:Cancel")) {
+		case 1:
+			.@map$ = "gld_dun01";
+			.@x = 119;
+			.@y = 17;
+			break;
+		case 2:
+			.@map$ = "gld_dun02";
+			.@x = 24;
+			.@y = 160;
+			break;
+		case 3:
+			.@map$ = "gld_dun03";
+			.@x = 44;
+			.@y = 33;
+			break;
+		case 4:
+			.@map$ = "gld_dun04";
+			.@x = 40;
+			.@y = 231;
+			break;
+		default:
+			close;
+	}
+
+	if (Zeny < 500000) {
+		mes "[Teleporter]";
+		mes "You don't have enough zeny.";
+		close;
+	}
+
+	Zeny -= 500000;
+	specialeffect2 EF_TELEPORTATION;
+	warp .@map$, .@x, .@y;
+	close;
+}

@@ -1526,6 +1526,62 @@ function	script	QWS_Darray	{
 
 	QWS_Make_Dungeon_Menu 32;
 
+//----------------Greenwood Lake Guild Dungeon
+	setarray @pDmenuitems$[@Di], "Greenwood Lake Guild Dungeon";
+	setarray @pDprice[@Di], $QW_AW_PRICE;
+	setarray @pDfee$[@Di], "$QW_AW_FEE";
+	setarray @DLevels[@Di], 4;
+
+	setarray @DGat$[@Dref], "gld_dun01";
+	setarray @DLevelName$[@Dref], "Greenwood Lake Guild Dungeon";
+	setarray @DXcoords[@Dref], 119;
+	setarray @DYcoords[@Dref], 17;
+	setarray @DDepth[@Dref], 0;
+
+	QWS_Make_Dungeon_Menu 33;
+
+//----------------Luina Guild Dungeon
+	setarray @pDmenuitems$[@Di], "Luina Guild Dungeon";
+	setarray @pDprice[@Di], $QW_AW_PRICE;
+	setarray @pDfee$[@Di], "$QW_AW_FEE";
+	setarray @DLevels[@Di], 4;
+
+	setarray @DGat$[@Dref], "gld_dun02";
+	setarray @DLevelName$[@Dref], "Luina Guild Dungeon";
+	setarray @DXcoords[@Dref], 24;
+	setarray @DYcoords[@Dref], 160;
+	setarray @DDepth[@Dref], 0;
+
+	QWS_Make_Dungeon_Menu 34;
+
+//----------------Valkyrie Guild Dungeon
+	setarray @pDmenuitems$[@Di], "Valkyrie Guild Dungeon";
+	setarray @pDprice[@Di], $QW_AW_PRICE;
+	setarray @pDfee$[@Di], "$QW_AW_FEE";
+	setarray @DLevels[@Di], 4;
+
+	setarray @DGat$[@Dref], "gld_dun03";
+	setarray @DLevelName$[@Dref], "Valkyrie Guild Dungeon";
+	setarray @DXcoords[@Dref], 44;
+	setarray @DYcoords[@Dref], 33;
+	setarray @DDepth[@Dref], 0;
+
+	QWS_Make_Dungeon_Menu 35;
+
+//----------------Britoniah Guild Dungeon
+	setarray @pDmenuitems$[@Di], "Britoniah Guild Dungeon";
+	setarray @pDprice[@Di], $QW_AW_PRICE;
+	setarray @pDfee$[@Di], "$QW_AW_FEE";
+	setarray @DLevels[@Di], 4;
+
+	setarray @DGat$[@Dref], "gld_dun04";
+	setarray @DLevelName$[@Dref], "Britoniah Guild Dungeon";
+	setarray @DXcoords[@Dref], 40;
+	setarray @DYcoords[@Dref], 231;
+	setarray @DDepth[@Dref], 0;
+
+	QWS_Make_Dungeon_Menu 36;
+
 //----------------Cancel
 	setarray @pDmenuitems$[@Di], "Cancel";
 	setarray @pDprice[@Di], 0;
@@ -1780,3 +1836,7 @@ lhz_dun04,241,56,4	script	Dimensius#75	10308,{ callfunc "QWS_Dungeon_Warpra",28,
 ra_san01,136,144,4	script	Dimensius#77	10308,{ callfunc "QWS_Dungeon_Warpra",30,"Hidden Dungeon"; close; }
 abbey01,47,10,4	script	Dimensius#78	10308,{ callfunc "QWS_Dungeon_Warpra",31,"Hidden Dungeon"; close; }
 //gefenia01,61,165,4	script	Dimensius#79	10308,{ callfunc "QWS_Dungeon_Warpra",32,"Hidden Dungeon"; close; }
+gld_dun01,112,19,4	script	Dimensius#80	10308,{ callfunc "QWS_Dungeon_Warpra",33,"Hidden Dungeon"; close; }
+gld_dun02,23,163,4	script	Dimensius#81	10308,{ callfunc "QWS_Dungeon_Warpra",34,"Hidden Dungeon"; close; }
+gld_dun03,37,32,4	script	Dimensius#82	10308,{ callfunc "QWS_Dungeon_Warpra",35,"Hidden Dungeon"; close; }
+gld_dun04,34,237,4	script	Dimensius#83	10308,{ callfunc "QWS_Dungeon_Warpra",36,"Hidden Dungeon"; close; }
