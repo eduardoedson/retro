@@ -1,5 +1,52 @@
 prontera,144,198,0	script	Monster of the Day	835,{
 
+    // GM Menu
+    if (getgmlevel() >= 80) {
+        mes "[Monster of the Day]";
+        mes "GM Menu";
+        mes " ";
+        mes "Current MOTD: ^FF0000" + .motd$ + "^000000 (ID: " + .motd_id + ")";
+        next;
+
+        switch(select("Enter Monster ID:Random Monster:Close")) {
+            case 1:
+                mes "[Monster of the Day]";
+                mes "Enter the Monster ID:";
+                input .@new_id;
+
+                if (.@new_id < 1000 || .@new_id > 10000) {
+                    mes "Invalid Monster ID!";
+                    close;
+                }
+
+                if (getmonsterinfo(.@new_id, MOB_NAME) == "null" || getmonsterinfo(.@new_id, MOB_NAME) == "") {
+                    mes "Monster ID " + .@new_id + " does not exist!";
+                    close;
+                }
+
+                .motd_id = .@new_id;
+                .motd$ = getmonsterinfo(.motd_id, MOB_NAME);
+
+                callsub S_UpdateDisplay;
+
+                mes "Monster of the Day changed to:";
+                mes "^FF0000" + .motd$ + "^000000 (ID: " + .motd_id + ")";
+                close;
+
+            case 2:
+                callsub S_SelectMonster;
+                callsub S_UpdateDisplay;
+
+                mes "[Monster of the Day]";
+                mes "Random monster selected:";
+                mes "^FF0000" + .motd$ + "^000000 (ID: " + .motd_id + ")";
+                close;
+
+            case 3:
+                close;
+        }
+    }
+
     end;
 
     OnNPCKillEvent:
