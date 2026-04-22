@@ -4,7 +4,7 @@ moc_para01,29,185,4	script	Guild Teleport Operator	PORTAL,{
 	mes "Choose your destination.";
 	mes "Each teleport costs ^FF0000500,000 zeny^000000.";
 
-	switch(select("Greenwood Lake Guild Dungeon:Luina Guild Dungeon:Valkyrie Guild Dungeon:Britoniah Guild Dungeon:Schwartzvald Guild Dungeon:Arunafeltz Guild Dungeon:Cancel")) {
+	switch (select("Greenwood Lake Guild Dungeon:Luina Guild Dungeon:Valkyrie Guild Dungeon:Britoniah Guild Dungeon:Schwartzvald Guild Dungeon:Arunafeltz Guild Dungeon:Cancel")) {
 		case 1:
 			.@map$ = "gld_dun01";
 			.@x = 119;
@@ -30,7 +30,7 @@ moc_para01,29,185,4	script	Guild Teleport Operator	PORTAL,{
 			.@x = 201;
 			.@y = 124;
 			break;
-		case 5:
+		case 6:
 			.@map$ = "arug_dun01";
 			.@x = 205;
 			.@y = 10;
